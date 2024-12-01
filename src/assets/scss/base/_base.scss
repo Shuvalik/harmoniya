@@ -1,0 +1,214 @@
+
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: $base-font;
+    font-weight: 400;
+    color: $navy-color;
+    @include font(40, 60);
+    font-family: 'MontserratAlternates-Regular';
+    scroll-behavior: smooth;
+    position: relative;
+} 
+.container {
+    width: 100%;
+    max-width: $base-width;
+    margin-inline: auto;
+    @media only screen and (max-width: 1920px) {
+      margin: 0 70px;
+      max-width: calc(100% - 140px);
+    }
+    // @media only screen and (max-width: 660px) {
+    //   margin: 0 15px;
+    //   max-width: calc(100% - 30px);
+    // }
+}
+header {
+  //position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex-grow: 1;
+  padding-top: 240px;
+}
+.twoColumns {
+    display: flex;
+    > * {
+        width: 50%;
+    }
+}
+// .page-wrapper section {
+//   padding: $main-space 0;
+//   @media only screen and (max-width: 1020px) {
+//     padding: $main-space-tb 0;
+//   }
+// }
+// .twoColumns {
+//     display: flex;
+//     justify-content: space-between;
+//     @media only screen and (max-width: 960px) {
+//       flex-direction: column;
+//     }
+//     > div {
+//       max-width: 50%;
+//       flex: 1 0 fit-content;
+//       @media only screen and (max-width: 960px) {
+//         max-width: 100%;
+//       }
+//     }
+// }
+// .threeColumns {
+//   display: flex;
+//   justify-content: space-between;
+//   > div {
+//     max-width: 33%;
+//     flex: 1 0 fit-content;
+//   }
+// }
+a {
+  color: $navy-color;
+  font-family: 'MontserratAlternates-Bold';
+  &:hover {
+    text-decoration: none;
+  }
+}
+p {
+  margin-bottom: 15px;
+}
+strong {
+  font-family: 'MontserratAlternates-SemiBold';
+}
+.h1 {
+  color: $navy-color;
+  font-family: 'MontserratAlternates-Bold';
+  @include font(100, 100);
+  -webkit-text-stroke: 1px #7CC8F6;
+  text-stroke: 1px #7CC8F6;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  margin-bottom: 20px;
+  padding-top: 20px;
+    @media only screen and (max-width: 1200px) {
+    }
+    @media only screen and (max-width: 960px) {
+    }
+}
+.h2 {
+  @include font(90, 90);
+  font-family: 'MontserratAlternates-SemiBold';
+  color: $navy-color;
+  margin-bottom: 30px;
+  @media only screen and (max-width: 1200px) {
+  }
+  @media only screen and (max-width: 660px) {
+  }
+}
+// .h3 {
+//   font-weight: 600;
+//   @include font(36, 54);
+//   margin-bottom: 24px;
+//     @media only screen and (max-width: 1200px) {
+//       @include font(24, 36);
+//     }
+// }
+.h4 {
+  @include font(50, 60);
+  font-family: 'MontserratAlternates-SemiBold';
+  margin-bottom: 20px;
+    @media only screen and (max-width: 1200px) {
+      //@include font(18, 28);
+    }
+}
+.markGreenColor {
+  color: $main-color;
+}
+.markBlueColor {
+  color: $blue-color;
+}
+.markYellowColor {
+  color: $yellow-color;
+}
+.number {
+  @include font(100, 90);
+  font-family: 'MontserratAlternates-Bold';
+}
+.pointArrow {
+  @include font(70, 70);
+  font-family: 'Caveat-Regular';
+  position: relative;
+  span {
+    transform: rotate(2.53deg);
+    display: inline-block;
+  }
+  .desc_show {
+    display: block;
+    width: 100%;
+  }
+}
+.rightText {
+  text-align: right;
+}
+// .smodzi {
+//   font-family: 'emodzi';
+// }
+// .sectionTitle {
+//   font-weight: 500;
+//   @include font(14, 20);
+//   letter-spacing: 3px;
+//   text-transform: uppercase;
+//   margin-bottom: 15px;
+// }
+// .subTitle {
+//   font-weight: 500;
+//   @include font(18, 28);
+//   margin-bottom: 15px;
+// }
+// .titleBox {
+//   color: $black-color;
+//   font-weight: 600;
+//   margin-bottom: 10px;
+// }
+// .addText {
+//     color: $black-color;
+//     @include font(12, 16);
+//     font-weight: 500;
+//     span {
+//       @include font(16, 24);
+//     }
+// }
+// .imageHolderFullWidth {
+//   aspect-ratio: 1270/406;
+//   width: 100%;
+//   padding-top: 40px;
+//   margin-bottom: $main-space;
+//   @media only screen and (max-width: 1020px) {
+//     margin-bottom: $main-space-tb;
+//   }
+// }
+// blockquote {
+//   font-weight: 600;
+//   @include font(24, 36);
+//   @media only screen and (max-width: 660px) {
+//     @include font(22, 28);
+//   }
+// }
+/**/
+.bg-green {
+  background-color: $green-lightest-color;
+}
+.bg-yellow {
+  background-color: $yellow-light-color;
+}
+.bg-blue {
+  background-color: $blue-light-color;
+}

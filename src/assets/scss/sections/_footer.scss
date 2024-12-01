@@ -1,0 +1,183 @@
+#footer {
+    .bigLogo {
+        display: block;
+    }
+}
+// .footer {
+//     font-weight: 500;
+//     .topSide {
+//         padding: 67px 0 60px;
+//         display: flex;
+//         position: relative;
+//         @media only screen and (max-width: 960px) {
+//             padding: 40px 0 25px;
+//             flex-direction: column;
+//             gap: 30px;
+//         }
+//         .h2 {
+//             margin-bottom: 40px;
+//             @media only screen and (max-width: 960px) {
+//                 margin-bottom: 10px;
+//             }
+//         }
+//         .topTextHolder {
+//             max-width: 40%;
+//             @media only screen and (max-width: 960px) {
+//                 max-width: 100%;
+//                 display: flex;
+//                 .adressHolder {
+//                    text-align: right;
+//                 }
+//                 address {
+//                     padding-left: 20%;
+//                     width: 100%;
+//                 }
+//             }
+//             @media only screen and (max-width: 660px) {
+//                 flex-direction: column;
+//             }
+//         }
+//         .colorLineLink {
+//             position: absolute;
+//             bottom: 65px;
+//             right: 0;
+//             .arrowLink {
+//                 padding-right: 30px;
+//                 display: inline;
+//             }
+//         }
+//     }
+//     .subTitle {
+//         font-weight: 600;
+//         @include font(24, 36);
+//         margin-bottom: 27px;
+//     }
+//     address {
+//         font-style: normal;
+//         width: 47%;
+//         p {
+//             margin-bottom: 5px;
+//         }
+//         a {
+//             color: $main-color;
+//             @include font(18, 28);
+//             position: relative;
+//             &::after {
+//                 content: '';
+//                 width: 0;
+//                 height: 1px;
+//                 background-color: $main-color;
+//                 position: absolute;
+//                 bottom: 0;
+//                 left: 50%;
+//                 transform: translateX(-50%);
+//                 transition: all .3s ease;
+//             }
+//             &:hover {
+//                 &::after {
+//                     width: 100%; 
+//                 }
+//             }
+//         }
+//         .separate {
+//             border-top: 1px solid rgba(0, 0, 0, 0.08);
+//             padding: 15px 0 0 0;
+//             margin-top: 12px;
+//             font-weight: 600;
+//             @include font(14, 20);
+//         }
+//     }
+//     .navSection {
+//         flex-grow: 1;
+//         .threeColumns {
+//             padding-left: 17px;
+//             padding-top: 15px;
+//             justify-content: flex-start;
+//             @media only screen and (max-width: 960px) {
+//                 padding: 0;
+//             }
+//             @media only screen and (max-width: 660px) {
+//                 flex-wrap: wrap;
+//                 gap: 20px;
+//             }
+//             & > nav {
+//                 width: 35%;
+//                 &.main-nav {
+//                     width: 29%;
+//                 }
+//                 @media only screen and (max-width: 660px) {
+//                     width: calc(50% - 40px);
+//                     &.main-nav {
+//                         width: calc(50% - 40px);
+//                     }
+//                 }
+//             }
+//             a {
+//                 @include font(14, 20);
+//                 color: $main-color;
+//                 position: relative;
+//                 &::after {
+//                     content: '';
+//                     width: 0;
+//                     height: 1px;
+//                     background-color: $main-color;
+//                     position: absolute;
+//                     bottom: 0;
+//                     left: 50%;
+//                     transform: translateX(-50%);
+//                     transition: all .3s ease;
+//                 }
+//                 &:hover {
+//                     &::after {
+//                         width: 100%; 
+//                     }
+//                 }
+//             }
+//         }
+//         .colorLineLink {
+//             align-self: flex-end;
+//             display: inline-block;
+//             .arrowLink {
+//                 @include font(16, 24);
+//                 color: $main-color;
+//                 padding-right: 28px;
+//             }
+//         }
+//         nav li {
+//             margin-bottom: 8px;
+//         }
+//         .main-nav li {
+//             margin-bottom: 12px;
+//             a {
+//                 font-weight: 600;
+//                 @include font(16, 28);
+//             }
+//         }
+//         .titleMenu {
+//             margin-bottom: 7px;
+//             font-weight: 600;
+//             @include font(16, 28);
+//         }
+//     }
+//     .bottomSide {
+//         background-color: $orange-lightest-color;
+//         color: $black-color;
+//         .container {
+//             display: flex;
+//             justify-content: space-between;
+//             align-items: center;
+//             gap: 25px;
+//             height: 80px;
+//             @media only screen and (max-width: 660px) {
+//                 flex-wrap: wrap;
+//                 height: auto;
+//                 justify-content: center;
+//                 padding: 20px 0;
+//             }
+//             .copyRight {
+//                 flex-grow: 1;
+//                 margin: 0 0 0 15px;
+//             }
+//         }
+//     }
+// }

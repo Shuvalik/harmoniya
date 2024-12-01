@@ -1,0 +1,412 @@
+.spotList {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    @include font(40, 60);
+    font-family: 'MontserratAlternates-SemiBold';
+    > div {
+        background-color: $yellow-light-color;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: center;
+        align-items: center;
+        padding: 20px 0;
+        width: calc(25% - 30px);
+    }
+}
+.boxLinkList {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    @include font(30, 40);
+    margin-bottom: 40px;
+    .boxLink {
+        width: calc(25% - 30px);
+        border-radius: 25px;
+        background: $blue-light-color;
+        padding: 14px;
+        height: 100%;
+        .maskLink {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            &:hover {
+                + img {
+                    transform: scale(1.2);
+                }
+                + .h4 {
+                    color: $blue-color;
+                }
+            }
+        }
+        .imgHolder {
+            border-radius: 25px;
+            overflow: hidden;
+            margin-bottom: 14px;
+            max-height: 447px;
+            height: 100%;
+            position: relative;
+            img {
+                aspect-ratio: 373/447 auto;
+                transition: all 0.6s ease;
+            }
+        }
+        .title-box {
+            position: relative;
+        }
+        .item-text {
+            border-radius: 25px;
+            background: $yellow-light-color;
+            padding: 25px 38px;
+        }
+    }
+}
+.stepList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 30px;
+    @include font(46, 60);
+    li {
+        flex-basis: calc(50% - 15px);
+        position: relative;
+        display: flex;
+        gap: 20px;
+        &:first-child::after {
+            content: ' ';
+            background: url("./../../assets/images/step-1-2.svg") 0 0 no-repeat ;
+            background-size: contain;
+            width: 251px;
+            height: 131px;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        &:nth-child(3) {
+            &::after {
+                content: ' ';
+                background: url("./../../assets/images/step-2-3.svg") 0 0 no-repeat ;
+                background-size: contain;
+                width: 257px;
+                height: 111px;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            &::before {
+                content: ' ';
+                background: url("./../../assets/images/step-3-4.svg") 0 0 no-repeat ;
+                background-size: contain;
+                width: 193px;
+                height: 40px;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+        }
+        svg {
+            @include circle(200);
+            background-color: $blue-light-color;
+            float: left;
+            flex:  0 0 200px;
+        }
+        .title {
+            font-family: 'MontserratAlternates-SemiBold';
+            text-transform: uppercase;
+        }
+    }
+}
+.documentsList {
+    @include font(35, 40);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 80px;
+    li {
+        padding: 0 0 0 100px;
+        position: relative;
+        &:nth-child(odd) {
+            width: 30%;
+        }
+        &:nth-child(even) {
+            width: calc(70% - 80px);
+        }
+        &::before {
+            content: ' ';
+            background: url("./../../assets/images/remove-delete-sign-bold.svg") 0 0 no-repeat ;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+}
+
+.valueList {
+    padding-right: 12%;
+    li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        @include font(30, 40);
+        .iconHolder {
+            @include circle(100);
+            background-color: $yellow-light-color;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            svg {
+                display: block;
+                width: 75%;
+                height: 75%;
+            }
+        }
+    }
+    .title {
+        color: $main-color;
+        font-family: 'MontserratAlternates-SemiBold';
+    }
+}
+// Sliders
+.swiper {
+    width: 600px;
+    height: 800px;
+    .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        border-radius: 50px;
+        text-align: center;
+        @include font(50, 60);
+        padding: 50px 70px;
+        .title {
+            font-family: 'MontserratAlternates-SemiBold';
+            margin-bottom: 30px;
+            padding-top: 30px;
+        }
+    }
+}
+.swiper, .swiper2, .swiper3 {
+    .swiper-button-prev, .swiper-button-next {
+        left: -100px;
+        right: auto;
+        transform: translateY(-120px);
+        @include circle(100);
+        background: #D9D9D9;
+        &:hover {
+            background: #868282;
+        }
+        &::after {
+            display: none;
+        }
+    }
+    .swiper-button-next {
+        transform: translateY(120px);
+    }
+}
+.swiper2 {
+    position: relative;
+    height: 752px;
+    overflow: hidden;
+    .swiper-wrapper {
+        padding-left: 100px;        
+    }
+    .swiper-slide {
+        height: 752px; // + 8px shadow
+        width: 602px;   // + 8px shadow
+        text-align: center;
+        @include font(30, 40);
+        .contentHolder {
+            box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+            margin: 8px;
+            height: 736px;
+        }
+        .imgHolder {
+            @include circle(300);
+            background: #C4C4C4;
+            margin: 10px auto;
+        }
+        .title {
+            color: $main-color;
+            font-family: 'MontserratAlternates-SemiBold';
+        }
+    }
+    .swiper-button-prev, .swiper-button-next {
+        left: 0;
+    }
+}
+.swiper3 {
+    overflow: hidden;
+    padding-bottom: 140px;
+    position: relative;
+    .swiper-slide {
+        height: 748px; // + 8px shadow
+        //width: 602px;   // + 8px shadow
+        text-align: center;
+        @include font(30, 40);
+        .contentHolder {
+            box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+            margin: 8px;
+            height: 736px;
+        }
+        .imgHolder {
+            @include circle(300);
+            background: #C4C4C4;
+            margin: 10px auto;
+        }
+        .title {
+            color: $main-color;
+            font-family: 'MontserratAlternates-SemiBold';
+        }
+    }
+    .swiper-button-prev, .swiper-button-next {
+        left: 50%;
+        bottom: 0;
+        top: auto;
+        transform: translate(120px, 0) rotate(-90deg);
+    }
+    .swiper-button-prev {
+        transform: translate(-120px, 0) rotate(-90deg);
+    }
+}
+// .threeImgBoxes {
+//     display: flex;
+//     gap: 10px;
+//     .imageHolder {
+//         flex: 1 0 100%;
+//         aspect-ratio: 420/446;
+//         max-width: calc((100% - 20px) / 3);
+//     }
+// }
+
+// .counterList {
+//     display: flex;
+//     justify-content: space-between;
+//     .number {
+//         font-weight: 600;
+//         @include font(36, 54);
+//         display: block;
+//         position: relative;
+//         padding-bottom: 15px;
+//         margin-bottom: 5px;
+//         &::after {
+//             content: ' ';
+//             position: absolute;
+//             left: 0;
+//             bottom: 0;
+//             height: 6px;
+//             width: 72px;
+//             background: linear-gradient(to right, $blue-color 14%, $orange-light-color 14%, $orange-light-color 76%, $orange-color 76%, $orange-color 100%);
+//         }
+//     }
+// }
+
+// .leftImageBox {
+//     display: flex;
+//     background-color: $white-color;
+//     .imgHolder {
+//         aspect-ratio: 296/248;
+//         width: 100%;
+//         max-width: 296px;
+//         @media only screen and (max-width: 1240px) {
+//             max-width: 240px;
+//         }
+//     }
+//     .textHolder {
+//         padding: 32px 30px 25px 33px;
+//         @media only screen and (max-width: 1240px) {
+//             padding: 25px;
+//         }
+//         .h4 {
+//             height: 111px;
+//             overflow: hidden;
+//             @media only screen and (max-width: 660px) {
+//                 height: auto;
+//             }
+//         }
+//         .arrowLink {
+//             padding-right: 34px;
+//         }
+//     }
+//     .date {
+//         @include font(14, 20);
+//         color: $font-color-grey;
+//         margin-bottom: 10px;
+//         display: block;
+//     }
+// }
+// .authorInfo {
+//     span {
+//         display: block;
+//     }
+//     .publishDate {
+//         color: $font-color;
+//         @include font(14, 20);
+//     }
+// }
+// //modal box
+// .overLightModal {
+//     position: fixed;
+//     width: 100vw;
+//     min-height: 100vh;
+//     left: 0;
+//     top: 0;
+//     background-color: rgba(0, 0, 0, 0.5);
+//     backdrop-filter: blur(5px);
+//     z-index: 1099;
+//     justify-content: center;
+//     align-items: center;
+//     display: none;
+//     &.open {
+//         display: flex;
+//     }
+//     .modalBox {
+//         width: 50%;
+//         padding: 5%;
+//         z-index: 1100;
+//         background-color: $white-color;
+//         position: relative;
+//         @media only screen and (max-width: 1350px) {
+//             .h2 {
+//                 @include font(32, 38);
+//             }
+//             #contact {
+//                 padding-top: 10px;
+//                 max-width: 80%;
+//                 .stylishCornerTreeColor {
+//                     margin-top: 0;
+//                 }
+//             }
+//         }
+//         @media only screen and (max-width: 1200px) {
+//             width: 65%;
+//             padding: 3% 10% 3% 3%;
+//         }
+//         @media only screen and (max-width: 600px) {
+//             width: 90%;
+//             .h2 {
+//                 @include font(26, 28);
+//                 margin: 0 20px 10px 0;
+//             }
+//             #contact {
+//                 padding-top: 0;
+//                 max-width: 95%;
+//             }
+//         }
+//         .closeBtn {
+//             position: absolute;
+//             right: 5%;
+//             top: 6%;
+//         }
+//         textarea {
+//             height: 40px;
+//         }
+//     }
+// }
