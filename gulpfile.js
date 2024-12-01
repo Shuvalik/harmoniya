@@ -16,12 +16,12 @@ const clean = require('gulp-clean')
 const ghPages = require('gulp-gh-pages')
 
 const SRC_ASSETS = './src/assets/'
-const DIST_ASSETS = './dist/assets/'
+const docs_ASSETS = './docs/assets/'
 
 function serve(){
   browserSync.init({
     server: {
-      baseDir: './dist/'
+      baseDir: './docs/'
     }
   })
   
@@ -42,7 +42,7 @@ function buildStyles() {
       overrideBrowserslist:["last 5 versions"],
       cascade: true
     }))
-    .pipe(dest(DIST_ASSETS+'css/'))
+    .pipe(dest(docs_ASSETS+'css/'))
     .pipe(browserSync.stream())
 }
 
@@ -52,7 +52,7 @@ function buildHTML(){
       prefix: '@@',
       basepath: '@file'
     }))
-    .pipe(dest('dist'))
+    .pipe(dest('docs'))
     .pipe(browserSync.stream())
 }
 
@@ -61,7 +61,7 @@ function buildScripts(){
     .pipe(concat('all.js'))
     .pipe(terser())
     .pipe(rename('all.min.js'))
-    .pipe(dest(DIST_ASSETS+'js/'))
+    .pipe(dest(docs_ASSETS+'js/'))
     .pipe(browserSync.stream())
 }
 
@@ -69,21 +69,21 @@ function buildPageScripts(){
   return src(SRC_ASSETS+'js/pages/*.js')
     .pipe(terser())
     .pipe(rename({ extname: '.min.js' }))
-    .pipe(dest(DIST_ASSETS+'js/'))
+    .pipe(dest(docs_ASSETS+'js/'))
     .pipe(browserSync.stream())
 }
 
 function modernImages(){
   return src([SRC_ASSETS+'images/*.*', '!'+SRC_ASSETS+'images/*.svg'])
-    .pipe(newer(DIST_ASSETS+'images/'))
+    .pipe(newer(docs_ASSETS+'images/'))
     .pipe(avif({ quality: 50 }))
     .pipe(src([SRC_ASSETS+'images/*.*', '!'+SRC_ASSETS+'images/*.svg']))
-    .pipe(newer(DIST_ASSETS+'images/'))
+    .pipe(newer(docs_ASSETS+'images/'))
     .pipe(webp())
     .pipe(src(SRC_ASSETS+'images/*.*'))
-    .pipe(newer(DIST_ASSETS+'images/'))
+    .pipe(newer(docs_ASSETS+'images/'))
     .pipe(imagemin())
-    .pipe(dest(DIST_ASSETS+'images/'))
+    .pipe(dest(docs_ASSETS+'images/'))
 }
 
 function convertFonts(){
@@ -91,22 +91,22 @@ function convertFonts(){
     .pipe(fonter({ formats: ['woff', 'ttf'] }))
     .pipe(src(SRC_ASSETS+'fonts/**/*.ttf'))
     .pipe(ttf2woff2())
-    .pipe(dest(DIST_ASSETS+'fonts/'))
+    .pipe(dest(docs_ASSETS+'fonts/'))
 }
 
-function cleanDist(){
-  return src('./dist/*')
+function cleandocs(){
+  return src('./docs/*')
     .pipe(clean({force: true}))
 }
 
 function moveFavicon(){
   return src('./src/favicon/*')
-    .pipe(dest('./dist/favicon/'))
+    .pipe(dest('./docs/favicon/'))
 }
 
 function movePlugins(){
   return src(SRC_ASSETS+'plugins/**/*')
-    .pipe(dest(DIST_ASSETS+'plugins/'))
+    .pipe(dest(docs_ASSETS+'plugins/'))
 }
 
 /*
@@ -114,13 +114,13 @@ https://medium.com/superhighfives/deploying-to-github-pages-with-gulp-c06efc527d
 Deploy is available only after build
 */
 function deploy(){
-  return src('./dist/**/*')
+  return src('./docs/**/*')
     .pipe(ghPages());
 }
 
 const move = parallel(moveFavicon, movePlugins)
 
-const build = series(cleanDist, parallel(buildHTML, buildStyles, buildScripts, buildPageScripts, modernImages, convertFonts, move))  
+const build = series(cleandocs, parallel(buildHTML, buildStyles, buildScripts, buildPageScripts, modernImages, convertFonts, move))  
 
 exports.serve = serve
 exports.buildStyles = buildStyles
@@ -129,7 +129,7 @@ exports.buildScripts = buildScripts
 exports.buildPageScripts = buildPageScripts
 exports.modernImages = modernImages
 exports.convertFonts = convertFonts
-exports.cleanDist = cleanDist
+exports.cleandocs = cleandocs
 exports.move = move
 exports.build = build
 exports.deploy = deploy

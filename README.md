@@ -38,7 +38,7 @@
 
 `npm start` - starting local server for development by address http://localhost:3000/, watch changes
 
-`npm build` - building project to the "dist" folder
+`npm build` - building project to the "docs" folder
 
 `npm deploy` - deploying current project to the GitHub pages branch. Deploy is available ONLY after building the project.
 
@@ -58,11 +58,11 @@
 
 `gulp convertFonts` - conver font filest from TTF, OTF to WOFF and WOFF2 formats
 
-`gulp cleanDist` - remove all files from the "dist" folder
+`gulp cleandocs` - remove all files from the "docs" folder
 
-`gulp move` - move favicon, fonts, plugins to the "dist" folder
+`gulp move` - move favicon, fonts, plugins to the "docs" folder
 
-`gulp build` - build project files into the "dist" folder
+`gulp build` - build project files into the "docs" folder
 
 `gulp deploy` - deploy project to the GitHub pages
 

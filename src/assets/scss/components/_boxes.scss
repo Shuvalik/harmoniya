@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     gap: 60px;
-    @include font(40, 60);
+    @include font(40, 50);
     font-family: 'MontserratAlternates-SemiBold';
     > div {
         background-color: $yellow-light-color;
@@ -12,8 +12,18 @@
         justify-content: flex-start;
         text-align: center;
         align-items: center;
-        padding: 20px 0;
+        padding: 50px 0 32px;
         width: calc(25% - 30px);
+        svg {
+            height: 100px;
+            margin-bottom: 7px;
+        }
+        .text {
+            flex-grow: 1;
+            display: flex;
+            align-content: center;
+            flex-wrap: wrap;
+        }
     }
 }
 .boxLinkList {
@@ -23,7 +33,7 @@
     @include font(30, 40);
     margin-bottom: 40px;
     .boxLink {
-        width: calc(25% - 30px);
+        width: calc(25% - 45px);
         border-radius: 25px;
         background: $blue-light-color;
         padding: 14px;
@@ -45,7 +55,7 @@
             }
         }
         .imgHolder {
-            border-radius: 25px;
+            border-radius: 16px;
             overflow: hidden;
             margin-bottom: 14px;
             max-height: 447px;
@@ -60,9 +70,9 @@
             position: relative;
         }
         .item-text {
-            border-radius: 25px;
+            border-radius: 16px;
             background: $yellow-light-color;
-            padding: 25px 38px;
+            padding: 17px 46px 1px;
         }
     }
 }
@@ -195,9 +205,9 @@
 }
 .swiper, .swiper2, .swiper3 {
     .swiper-button-prev, .swiper-button-next {
-        left: -100px;
+        left: -205px;
         right: auto;
-        transform: translateY(-120px);
+        transform: translateY(-75px);
         @include circle(100);
         background: #D9D9D9;
         &:hover {
@@ -208,7 +218,7 @@
         }
     }
     .swiper-button-next {
-        transform: translateY(120px);
+        transform: translateY(65px);
     }
 }
 .swiper2 {

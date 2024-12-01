@@ -2,6 +2,60 @@
     .bigLogo {
         display: block;
     }
+    .titleBox {
+        font-family: 'MontserratAlternates-SemiBold';
+        @include font(65, 70);
+        text-align: center;
+    }
+    address {
+        background: $yellow-light-color;
+        border-radius: 25px;
+        font-family: 'MontserratAlternates-SemiBold';
+        @include font(35, 40);
+        padding: 20px 30px;
+        a {
+            font-family: 'MontserratAlternates-SemiBold';
+            @include font(35, 40);
+            display: block;
+            width: 100%;
+            position: relative;
+            &::after {
+                content: '';
+                width: 0;
+                height: 1px;
+                background-color: $navy-color;
+                position: absolute;
+                bottom: -2px;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: all .3s ease;
+                }
+                &:hover {
+                    &::after {
+                            width: 100%;
+                        }
+                }
+        }
+        > div {
+            display: flex;
+            overflow: hidden;
+            align-items: center;
+            svg {
+                flex: 0 0 100px;
+                margin-right: 40px;
+            }
+        }
+    }
+    .blueBox {
+        background: $blue-light-color;
+        border-radius: 25px;
+        .sotial-links a {
+            svg path, 
+            svg rect {
+                fill-opacity: 1;
+            }
+        }
+    }
 }
 // .footer {
 //     font-weight: 500;

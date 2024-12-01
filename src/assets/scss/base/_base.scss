@@ -2,11 +2,14 @@
 html{
     scroll-behavior: smooth;
 }
+html, body {
+  width: 100%;
+}
 body {
     font-family: $base-font;
     font-weight: 400;
     color: $navy-color;
-    @include font(40, 60);
+    @include font(40, 55);
     font-family: 'MontserratAlternates-Regular';
     scroll-behavior: smooth;
     position: relative;
@@ -16,8 +19,8 @@ body {
     max-width: $base-width;
     margin-inline: auto;
     @media only screen and (max-width: 1920px) {
-      margin: 0 70px;
-      max-width: calc(100% - 140px);
+      margin: 0 50px;
+      max-width: calc(100% - 100px);
     }
     // @media only screen and (max-width: 660px) {
     //   margin: 0 15px;
@@ -37,7 +40,12 @@ header {
 }
 main {
   flex-grow: 1;
-  padding-top: 240px;
+  > :first-child {
+    padding-top: 240px;
+  }
+  > section {
+    min-height: 100vh;
+  }
 }
 .twoColumns {
     display: flex;
@@ -89,25 +97,22 @@ strong {
 .h1 {
   color: $navy-color;
   font-family: 'MontserratAlternates-Bold';
-  @include font(100, 100);
+  @include font(100, 120);
   -webkit-text-stroke: 1px #7CC8F6;
   text-stroke: 1px #7CC8F6;
   text-shadow: 0 4px 4px rgba(0, 0, 0, .25);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
-  margin-bottom: 20px;
-  padding-top: 20px;
     @media only screen and (max-width: 1200px) {
     }
     @media only screen and (max-width: 960px) {
     }
 }
 .h2 {
-  @include font(90, 90);
+  @include font(90, 110);
   font-family: 'MontserratAlternates-SemiBold';
   color: $navy-color;
-  margin-bottom: 30px;
   @media only screen and (max-width: 1200px) {
   }
   @media only screen and (max-width: 660px) {
@@ -139,8 +144,9 @@ strong {
   color: $yellow-color;
 }
 .number {
-  @include font(100, 90);
+  @include font(100, 110);
   font-family: 'MontserratAlternates-Bold';
+  padding-left: 43px;
 }
 .pointArrow {
   @include font(70, 70);
