@@ -18,8 +18,9 @@ body {
     width: 100%;
     max-width: $base-width;
     margin-inline: auto;
+    //margin: 0 auto;
     @media only screen and (max-width: 1920px) {
-      margin: 0 50px;
+      margin: 0 $space-container;
       max-width: calc(100% - 100px);
     }
     // @media only screen and (max-width: 660px) {
@@ -28,14 +29,18 @@ body {
     // }
 }
 header {
-  //position: absolute;
+  position: absolute;
   left: 0;
   top: 0;
   width: 100%;
 }
-.page-wrapper {
-  display: flex;
-  flex-direction: column;
+.page-wrap {
+  //display: flex;
+  //flex-direction: column;
+  //min-height: 100vh;
+  //position: relative;
+}
+footer {
   min-height: 100vh;
 }
 main {
@@ -45,6 +50,7 @@ main {
   }
   > section {
     min-height: 100vh;
+    padding-top: 1px;
   }
 }
 .twoColumns {

@@ -5,14 +5,19 @@
     .titleBox {
         font-family: 'MontserratAlternates-SemiBold';
         @include font(65, 70);
-        text-align: center;
+        margin-bottom: 30px;
     }
     address {
         background: $yellow-light-color;
         border-radius: 25px;
         font-family: 'MontserratAlternates-SemiBold';
         @include font(35, 40);
-        padding: 20px 30px;
+        padding: 52px 0 1px 43px;
+        font-style: normal;
+        margin-bottom: 25px;
+        > div {
+            margin-bottom: 7px;
+        }
         a {
             font-family: 'MontserratAlternates-SemiBold';
             @include font(35, 40);
@@ -49,12 +54,27 @@
     .blueBox {
         background: $blue-light-color;
         border-radius: 25px;
-        .sotial-links a {
-            svg path, 
-            svg rect {
-                fill-opacity: 1;
+        padding: 45px 22px 1px;
+        .titleBox {
+            margin-bottom: 45px;
+        }
+        .sotial-links {
+            justify-content: space-between;
+            gap: 20px;
+            padding: 0 20px;
+            a {
+                svg path, 
+                svg rect {
+                    fill-opacity: 1;
+                }
             }
         }
+    }
+    .twoColumns > * {
+        width: 38%;
+        &.logoHolder {
+            width: 62%;
+        } 
     }
 }
 // .footer {
