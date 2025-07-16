@@ -23,6 +23,9 @@
   a {
     @include font(50, 60);
     color: $navy-color;
+    @media only screen and (max-width: 1536px) {
+      @include font(40, 50);
+    }
     &:hover {
       color:rgba(0,0,0,0);
     }
@@ -62,6 +65,10 @@
   transition: all 0.8s ease;
   font-family: 'MontserratAlternates-Regular';
   @include font(50, 60);
+  @media only screen and (max-width: 1536px) {
+    @include font(40, 50);
+    max-width: 340px;
+  }
   &:hover {
     background-color: #158509;
   }
@@ -91,9 +98,38 @@
 }
 .holderBtnArrow {
   position: sticky;
-  bottom: 10%;
-  left: 90%;
-  height: 100px;
+  bottom: 5%;
+  left: 93%;
   width: 100px;
-  background-color: #158509;
+  height: 100px;
+  z-index: 10;
+  svg {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+  }
+  .arrow-down {
+    display: block;
+    border-radius: 50px;
+    svg {
+      transition: all .8s ease;
+      path {
+        stroke: #2C4058;
+      }
+    }
+    &:hover {
+      svg {
+        transform: scale(1.25);
+        path {
+          fill: #868282;
+          
+        }
+      }
+    }
+    &[name-diraction=up] {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
 }

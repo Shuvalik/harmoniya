@@ -13,6 +13,9 @@ body {
     font-family: 'MontserratAlternates-Regular';
     scroll-behavior: smooth;
     position: relative;
+    @media only screen and (max-width: 1536px) {
+      @include font(30, 45);
+    }
 } 
 .container {
     width: 100%;
@@ -47,6 +50,9 @@ main {
   flex-grow: 1;
   > :first-child {
     padding-top: 240px;
+    @media only screen and (max-width: 1536px) {
+      padding-top: 190px;
+    }
   }
   > section {
     min-height: 100vh;

@@ -8,6 +8,9 @@ header#header {
 		display: block;
 		img {
 			max-width: 595px;
+			@media only screen and (max-width: 1536px) {
+				max-width: 440px;
+			}
 		}
 	}
 	.headerMain {
@@ -18,6 +21,9 @@ header#header {
 			justify-content: space-between;
 			align-items: center;
 			height: 240px;
+			@media only screen and (max-width: 1536px) {
+				height: 190px;
+			}
 		}
 	}
 }

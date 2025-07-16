@@ -8,27 +8,28 @@
   <title>Main</title>
   <meta name="description" content="">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-  <link rel="manifest" href="favicon/site.webmanifest">
-  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="shortcut icon" href="favicon/favicon.ico">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="msapplication-config" content="favicon/browserconfig.xml">
-  <meta name="theme-color" content="#ffffff">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
 
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="">
-  <meta property="og:description" content="">
-  <meta property="og:url" content="https://">
-  <meta property="og:site_name" content="">
-  <meta property="og:image" content="https:///assets/images/og_image.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-
-  <link rel="stylesheet" href="./assets/css/styles.min.css">
+<meta property="og:locale" content="en">
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="https://">
+<meta property="og:site_name" content="">
+<meta property="og:image" content="https:///assets/images/og_image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="stylesheet" href="./assets/css/animate.min.css">
+<link rel="stylesheet" href="./assets/css/styles.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- <link rel="stylesheet" href="./assets/css/main.min.css"> -->
 </head>
@@ -66,7 +67,7 @@
 </header>
 
     <main>
-      <section class="campaign">
+      <section id="main-part" class="campaign">
         <div id="first-bg" class="bg-image-holder lazy" data-bg="assets/images/bg-header.jpg">
           <picture>
             <!-- <source data-srcset="assets/images/mob-bg-why-section.jpg" media="(max-width: 767px)"
@@ -117,7 +118,7 @@
           </div>
         </div>
       </section>
-      <section>
+      <section id="who-are-we">
         <div class="container">
           <div class="rightLogo">
             <h2 class="h2"><span class="markGreenColor">Хто </span>ми?</h2>
@@ -168,7 +169,7 @@
           </div>
         </div>
       </section>
-      <section class="why-choose">
+      <section id="why-choose-us" class="why-choose">
         <div class="container">
           <h2 class="h2">
             <span class="markGreenColor">Чому</span> варто обрати “Гармонію”?
@@ -261,7 +262,7 @@
           </div>
         </div>
       </section>
-      <section class="departments">
+      <section id="departments" class="departments">
         <div class="container">
           <h2 class="h2">
             <span class="markBlueColor">Безперервна </span>освіта
@@ -323,7 +324,7 @@
           <a href="/" class="btn my-gradient"><span>Записатись на співбесіду прямо зараз</span></a>
         </div>
       </section>
-      <section class="price">
+      <section id="price" class="price">
         <div class="container">
           <h2 class="h2">Вартість <span class="markYellowColor">послуг</span></h2>
           <ul class="priceList">
@@ -369,7 +370,7 @@
           </ol>
         </div>
       </section>
-      <section class="enterToSchool">
+      <section id="enter-to-school" class="enterToSchool">
         <div class="container">
           <h2 class="h2">Як <span class="markBlueColor">стати </span>нашим учнем?</h2>
           <ul class="stepList">
@@ -429,7 +430,7 @@
           </ul>
         </div>
       </section>
-      <section class="freeDay">
+      <section id="free-day" class="freeDay">
         <div class="container">
           <div class="rightLogo">
             <h2 class="h2">Спробуйте <span class="markBlueColor">безкоштовний </span>день!</h2>
@@ -454,7 +455,7 @@
           </div>
         </div>
       </section>
-      <section class="review">
+      <section id="review" class="review">
         <div class="container">
           <h2 class="h2">Що ще <span class="markGreenColor">важливо</span> знати про “Гармонію”?</h2>
           <div class="twoColumns">
@@ -509,8 +510,8 @@
                     <div class="imgHolder">
                       <img src="assets/images/content-image/review-img1.jpg" alt="Пані Оксана">
                     </div>
-                    <p class="title">Пані Оксана, <br/>
-                       мати учениці 2 класу</p>
+                    <p class="title">Пані Оксана, <br />
+                      мати учениці 2 класу</p>
                     <p>“Вдячні ліцею за розуміння, турботу, терпіння, підтримку! Дякуємо за знання! Донька із
                       задоволенням
                       чекає на свій другий клас! ”</p>
@@ -522,7 +523,7 @@
                       <img src="assets/images/content-image/review-img2.jpg" alt="Пані Валентина">
                     </div>
                     <p class="title">Пані Валентина,<br />
-                        мати учениці 2 класу</p>
+                      мати учениці 2 класу</p>
                     <p>“Приємно бачити, коли доня біжить із задоволенням в школу, просить не запізнюватись, щоб не
                       пропустити щось цікаве, і
                       засмучується, коли треба пропустити день в школі! Щаслива дитина - головний орієнтир. ”</p>
@@ -615,7 +616,7 @@
                     <div class="imgHolder">
                       <img src="assets/images/content-image/review-img11.jpg" alt="Ілона">
                     </div>
-                    <p class="title">Ілона,  <br/> випускниця “Гармонії”</p>
+                    <p class="title">Ілона, <br /> випускниця “Гармонії”</p>
                     <p>“Навчання у “Гармонії” дозволило мені успішно скласит ЗНО, вступити в омріяний ВНЗ,
                       працевлаштуватись. Вдячна ліцею за приємні спогади та чудовтй старт!”</p>
                   </div>
@@ -647,7 +648,7 @@
           </div>
         </div>
       </section>
-      <section class="team">
+      <section id="our-team" class="team">
         <div class="container">
           <h2 class="h2"><span class="markGreenColor">Команда</span> “Гармонії”</h2>
           <div class="swiper3">
@@ -685,7 +686,7 @@
                   <div class="imgHolder">
                     <img src="./assets/images/content-image/team-img4.jpg" alt="Вікторія Тимофієва">
                   </div>
-                  <p class="title">Вікторія Тимофієва,<br />  вчителька 1 класу</p>
+                  <p class="title">Вікторія Тимофієва,<br /> вчителька 1 класу</p>
                   <p>“Важливо створити атмосферу довіри і підтримки, де кожен учень почуватиметься цінним і натхненним
                     до навчання.”</p>
                 </div>
@@ -695,7 +696,7 @@
                   <div class="imgHolder">
                     <img src="./assets/images/content-image/team-img5.jpg" alt="Іванна Марусій">
                   </div>
-                  <p class="title">Іванна Марусій, <br/> вчителька 3 класу</p>
+                  <p class="title">Іванна Марусій, <br /> вчителька 3 класу</p>
                   <p>“Завдання вчителя - не просто передати знання, а створити простір,
                     де учні можуть мріяти, досліджувати й розкривати свої таланти.”</p>
                 </div>
@@ -853,7 +854,7 @@
           </div>
         </div>
       </section>
-      <section class="form">
+      <section id="contact-us" class="form">
         <div class="container">
           <h2 class="h2">Познайомтесь з нашим ліцеєм</h2>
           <div class="twoColumns">
@@ -863,7 +864,7 @@
                 <label for="field1">Як до Вас можна звертатись?</label>
               </div>
               <div class="fildSection">
-                <input type="tel" autocomplete="off" id="field2" value="" placeholder="+38(0__)___-__-__" required>
+                <input type="text" autocomplete="off" id="field2" value="" placeholder="+38(0__)___-__-__" required>
                 <label for="field2"></label>
               </div>
               <div class="fildSection">
@@ -974,37 +975,58 @@
     </div>
   </div>
 </footer>
-    <div class="holderBtnArrow">
-      <div class="wow pulse" data-wow-delay="300ms" data-wow-iteration="infinite" data-wow-duration="2s">
-        <a href="#what-we-do" data-scroll class="arrow-down">
-          <svg width="42" height="40" viewBox="0 0 42 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M24.9048 19.111C24.9606 19.1669 24.9885 19.231 24.9885 19.3036C24.9885 19.3761 24.9606 19.4403 24.9048 19.4961L21.0041 23.3968C20.9483 23.4526 20.8841 23.4805 20.8116 23.4805C20.7391 23.4805 20.6749 23.4526 20.6191 23.3968L16.7184 19.4961C16.6626 19.4403 16.6347 19.3761 16.6347 19.3036C16.6347 19.231 16.6626 19.1669 16.7184 19.111L17.1369 18.6925C17.1927 18.6367 17.2569 18.6088 17.3295 18.6088C17.402 18.6088 17.4662 18.6367 17.522 18.6925L20.8116 21.9821L24.1012 18.6925C24.157 18.6367 24.2212 18.6088 24.2937 18.6088C24.3663 18.6088 24.4305 18.6367 24.4863 18.6925L24.9048 19.111Z"
-              fill="white" />
-            <path opacity="0.7"
-              d="M40.5447 20C40.5447 30.7685 31.7958 39.5 21.0011 39.5C10.2064 39.5 1.45746 30.7685 1.45746 20C1.45746 9.23147 10.2064 0.5 21.0011 0.5C31.7958 0.5 40.5447 9.23147 40.5447 20Z"
-              stroke="white" />
-          </svg>
-        </a>
-      </div>
-    </div>
+    
   </div>
-
+<div class="holderBtnArrow">
+  <div class="wow animate__pulse" data-wow-delay="300ms" data-wow-iteration="infinite" data-wow-duration="2s">
+    <a href="#who-are-we" data-scroll class="arrow-down" id="arrow-nav">
+      <svg width="42" height="40" viewBox="0 0 42 40" fill="#d9d9d9" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M24.9048 19.111C24.9606 19.1669 24.9885 19.231 24.9885 19.3036C24.9885 19.3761 24.9606 19.4403 24.9048 19.4961L21.0041 23.3968C20.9483 23.4526 20.8841 23.4805 20.8116 23.4805C20.7391 23.4805 20.6749 23.4526 20.6191 23.3968L16.7184 19.4961C16.6626 19.4403 16.6347 19.3761 16.6347 19.3036C16.6347 19.231 16.6626 19.1669 16.7184 19.111L17.1369 18.6925C17.1927 18.6367 17.2569 18.6088 17.3295 18.6088C17.402 18.6088 17.4662 18.6367 17.522 18.6925L20.8116 21.9821L24.1012 18.6925C24.157 18.6367 24.2212 18.6088 24.2937 18.6088C24.3663 18.6088 24.4305 18.6367 24.4863 18.6925L24.9048 19.111Z"
+          fill="#d9d9d9" />
+        <path opacity="0.5"
+          d="M40.5447 20C40.5447 30.7685 31.7958 39.5 21.0011 39.5C10.2064 39.5 1.45746 30.7685 1.45746 20C1.45746 9.23147 10.2064 0.5 21.0011 0.5C31.7958 0.5 40.5447 9.23147 40.5447 20Z"
+          stroke="#2C4058" />
+      </svg>
+    </a>
+  </div>
+</div>
   <script src="./assets/js/all.min.js"></script>
   <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
-  
+
   <script src="./assets/js/all.min.js"></script>
-  
+
   <script src="./assets/js/main.min.js"></script>
 
   <script>
     $(function () {
       //2. Получить элемент, к которому необходимо добавить маску
       //$("#field2").mask("+38(099)999-99-99");
-      
+      $("#field2").inputmask({ "mask": "+38 (999) 999-99-99" });
+
+
+      /*call functions */
+
       new WOW().init();
+      /* events defenition */
+      $('a[data-scroll]').on('click', function (e) {
+        e.preventDefault();
+        
+        if (this.hasAttribute('name-diraction')) { this.removeAttribute('name-diraction') };
+        const href = $(this).attr('href');
+        $('html, body').animate({ scrollTop: $(href).offset().top }, 1000);
+        let nextHref = document.getElementById(href.slice(1)).nextElementSibling;
+        if (nextHref != null && href != '#footer')
+          $(this).attr('href', '#' + nextHref.id)
+        else if (href == '#contact-us') {
+          $(this).attr('href', '#footer');
+        } else {
+          $(this).attr('href', '#main-part');
+          this.setAttribute('name-diraction', 'up');;
+        }
+      });
     });
 
     if (Swiper != "undefined") {

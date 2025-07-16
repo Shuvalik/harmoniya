@@ -116,7 +116,7 @@
     }
 }
 .enterToSchool {
-    padding-top: 47px;
+    //padding-top: 47px;
     .h2 {
         text-align: right;
         padding-right: 73px;
@@ -146,6 +146,9 @@
     gap: 32px 60px;
     padding: 66px 20px 0;
     @include font(40, 50);
+    @media only screen and (max-width: 1536px) {
+      @include font(30, 45);
+    }
     > div {
         min-height: 250px;
         text-align: center;
