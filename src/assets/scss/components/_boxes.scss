@@ -4,6 +4,17 @@
     gap: 60px;
     @include font(40, 50);
     font-family: 'MontserratAlternates-SemiBold';
+    @media only screen and (max-width: $xl-deck) {
+        @include font(30, 40);
+    }
+    @media only screen and (max-width: $l-deck) {
+        @include font(26, 30);
+        gap: 40px;
+    }
+    @media only screen and (max-width: $s-deck) {
+        @include font(22, 28);
+        gap: 20px;
+    }
     > div {
         background-color: $yellow-light-color;
         border-radius: 25px;
@@ -13,10 +24,22 @@
         text-align: center;
         align-items: center;
         padding: 50px 0 32px;
-        width: calc(25% - 30px);
+        width: calc(25% - 45px);
+        @media only screen and (max-width: $xl-deck) {
+            padding: 25px 0;
+        }
+        @media only screen and (max-width: $l-deck) {
+            width: calc(25% - 30px);
+        }
+        @media only screen and (max-width: $s-deck) {
+            width: calc(25% - 15px);
+        }
         svg {
             height: 100px;
             margin-bottom: 7px;
+            @media only screen and (max-width: $xl-deck) {
+                height: 70px;
+            }
         }
         .text {
             flex-grow: 1;
@@ -32,12 +55,36 @@
     gap: 60px;
     @include font(30, 40);
     margin-bottom: 40px;
+    @media only screen and (max-width: $xl-deck) {
+        @include font(32, 32);
+        margin-bottom: 20px;
+        gap: 40px;
+    }
+    @media only screen and (max-width: $l-deck) {
+        @include font(24, 30);
+    }
+    @media only screen and (max-width: $s-deck) {
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
     .boxLink {
         width: calc(25% - 45px);
         border-radius: 25px;
         background: $blue-light-color;
         padding: 14px;
-        height: 100%;
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        @media only screen and (max-width: $xl-deck) {
+           width: calc(25% - 30px);
+           padding: 10px;
+           border-radius: 20px;
+        }
+        @media only screen and (max-width: $s-deck) {
+           width: calc(50% - 5px);
+           padding: 5px;
+        }
         .maskLink {
             position: absolute;
             left: 0;
@@ -61,6 +108,13 @@
             max-height: 447px;
             height: 100%;
             position: relative;
+            @media only screen and (max-width: $xl-deck) {
+                margin-bottom: 10px;
+            }
+            @media only screen and (max-width: $s-deck) {
+                max-height: 200px;
+                margin-bottom: 5px;
+            }
             img {
                 aspect-ratio: 373/447 auto;
                 transition: all 0.6s ease;
@@ -72,7 +126,17 @@
         .item-text {
             border-radius: 16px;
             background: $yellow-light-color;
-            padding: 17px 46px 1px;
+            padding: 17px 42px 1px;
+            flex-grow: 1;
+            @media only screen and (max-width: $xl-deck) {
+                padding: 5px 15px;
+            }
+            @media only screen and (max-width: $l-deck) {
+                padding: 5px 27px;
+            }
+            @media only screen and (max-width: $m-deck) {
+                padding: 5px 20px;
+            }
         }
     }
 }
@@ -82,6 +146,22 @@
     margin: 0 30px 50px;
     gap: 82px 45px;
     @include font(46, 60);
+    @media only screen and (max-width: $xl-deck) {
+        @include font(36, 40);
+    }
+    @media only screen and (max-width: $l-deck) {
+        gap: 70px 30px;
+        @include font(28, 36);
+        margin-bottom: 40px;
+    }
+    @media only screen and (max-width: $m-deck) {
+        gap: 35px 30px;
+        margin-bottom: 30px;
+    }
+    @media only screen and (max-width: $s-deck) {
+        gap: 35px 30px;
+        margin: 0 0 30px;
+    }
     li {
         position: relative;
         display: flex;
@@ -89,6 +169,9 @@
         flex-basis: calc(50% + 30px);
         &:nth-child(odd) {
             flex-basis: calc(50% - 85px);
+            @media only screen and (max-width: $m-deck) {
+                flex-basis: calc(50% - 70px);
+            }
         }
         &:first-child::after {
             content: ' ';
@@ -99,6 +182,12 @@
             position: absolute;
             right: 0;
             top: -45px;
+            @media only screen and (max-width: $l-deck) {
+                width: 201px;
+                height: 81px; 
+                right: -50px;
+                top: -20px; 
+            }
         }
         &:nth-child(3) {
             &::after {
@@ -110,6 +199,12 @@
                 position: absolute;
                 right: -26px;
                 top: -104px;
+                @media only screen and (max-width: $l-deck) {
+                    width: 207px;
+                    height: 61px;
+                    right: -56px;
+                    top: -54px;
+                }
             }
             &::before {
                 content: ' ';
@@ -120,6 +215,10 @@
                 position: absolute;
                 right: -40px;
                 bottom: -20px;
+                @media only screen and (max-width: $l-deck) {
+                    width: 143px;
+                    right: -20px;
+                }
             }
         }
         .iconHolder {
@@ -129,6 +228,22 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            @media only screen and (max-width: $xl-deck) {
+                @include circle(150);
+                flex:  0 0 150px;
+                svg {
+                    width: 100px;
+                    display: inline-block;
+                }
+            }
+            @media only screen and (max-width: $xl-deck) {
+                @include circle(100);
+                flex:  0 0 100px;
+                svg {
+                    width: 50px;
+                    display: inline-block;
+                }
+            }
         }
         .title {
             font-family: 'MontserratAlternates-SemiBold';
@@ -143,14 +258,48 @@
     flex-wrap: wrap;
     gap: 22px 86px;
     margin: 0 30px;
+    @media only screen and (max-width: $xl-deck) {
+        @include font(30, 32);
+        gap: 20px 40px;
+    }
+    @media only screen and (max-width: $l-deck) {
+        @include font(28, 32);
+        margin: 0;
+    }
+    @media only screen and (max-width: $m-deck) {
+        gap: 15px 30px;
+        @include font(26, 32);
+    }
+    @media only screen and (max-width: $s-deck) {
+        gap: 15px 30px;
+        @include font(24, 30);
+    }
     li {
         padding: 0 0 0 78px;
         position: relative;
+        @media only screen and (max-width: $l-deck) {
+            padding: 0 0 0 58px;
+        }
+        @media only screen and (max-width: $s-deck) {
+            padding: 0 0 0 50px;
+        }
         &:nth-child(odd) {
             width: calc(37% - 78px);
+            @media only screen and (max-width: $l-deck) {
+                width: calc(37% - 58px);
+            }
+            @media only screen and (max-width: $s-deck) {
+                width: calc(37% - 50px);
+            }
         }
         &:nth-child(even) {
             width: calc(63% - 78px);
+            @media only screen and (max-width: $l-deck) {
+                width: calc(63% - 58px);
+            };
+            @media only screen and (max-width: $s-deck) {
+                width: calc(63% - 50px);
+            };
         }
         &::before {
             content: ' ';
@@ -160,13 +309,27 @@
             position: absolute;
             left: 0;
             top: 0;
+            @media only screen and (max-width: $l-deck) {
+                width: 58px;
+                height: 52px;
+                background-size: contain;
+
+            }
         }
     }
 }
 
 .valueList {
-    padding-right: 14%;
-    padding-top: 58px;
+    padding: 58px 14% 0 0;
+    @media only screen and (max-width: $xl-deck) {
+        padding: 35px 5% 0 0;
+    }
+    @media only screen and (max-width: $l-deck) {
+        padding-top: 25px;
+    }
+    @media only screen and (max-width: $m-deck) {
+        padding: 15px 20px 0 0;
+    }
     li {
         display: flex;
         justify-content: space-between;
@@ -174,6 +337,17 @@
         gap: 22px;
         @include font(30, 38);
         margin-bottom: 10px;
+        @media only screen and (max-width: $xl-deck) {
+           margin-bottom: 20px;
+            @include font(28, 32);
+        }
+        @media only screen and (max-width: $l-deck) {
+            @include font(24, 30);
+        }
+        @media only screen and (max-width: $s-deck) {
+            gap: 15px;
+            @include font(22, 28);
+        }
         .iconHolder {
             @include circle(100);
             background-color: $yellow-light-color;
@@ -181,6 +355,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            @media only screen and (max-width: $s-deck) {
+                @include circle(75);
+            }
             svg {
                 display: block;
                 width: 75%;
@@ -198,6 +375,18 @@
 .swiper {
     width: 600px;
     height: 800px;
+    @media only screen and (max-width: $xl-deck) {
+        width: 500px;
+        height: 700px;
+    }
+    @media only screen and (max-width: $l-deck) {
+        width: 400px;
+        height: 600px;
+    }
+    @media only screen and (max-width: $s-deck) {
+        width: 300px;
+        height: 500px;
+	}
     .swiper-slide {
         display: flex;
         align-items: center;
@@ -207,6 +396,17 @@
         text-align: center;
         @include font(50, 60);
         padding: 50px 70px;
+        @media only screen and (max-width: $xl-deck) {
+            @include font(40, 50);
+            border-radius: 40px;
+            padding: 40px 60px;
+        }
+        @media only screen and (max-width: $l-deck) {
+            @include font(30, 40);
+        }
+        @media only screen and (max-width: $s-deck) {
+            @include font(22, 30);
+        }
         .title {
             font-family: 'MontserratAlternates-SemiBold';
             margin-bottom: 30px;
@@ -220,6 +420,11 @@
         right: auto;
         transform: translateY(-75px);
         @include circle(100);
+        @media only screen and (max-width: $s-deck) {
+            @include circle(75);
+            left: -135px;
+            transform: translateY(-65px);
+        }
         background: #D9D9D9;
         &:hover {
             background: #868282;
@@ -230,30 +435,67 @@
     }
     .swiper-button-next {
         transform: translateY(65px);
+        @media only screen and (max-width: $s-deck) {
+            transform: translateY(55px);
+        }
     }
 }
 .swiper2 {
     position: relative;
     height: 752px;
     overflow: hidden;
+    @media only screen and (max-width: $xl-deck) {
+        height: 652px;
+    }
+    @media only screen and (max-width: $l-deck) {
+        height: 552px;
+    }
     .swiper-wrapper {
-        padding-left: 157px;        
+        padding-left: 157px;
+        @media only screen and (max-width: $xl-deck) {
+            padding-left: 130px;
+        }   
+        @media only screen and (max-width: $s-deck) {
+            padding-left: 80px;
+        }      
     }
     .swiper-slide {
         height: 752px; // + 8px shadow
         width: 602px;   // + 8px shadow
         text-align: center;
         @include font(30, 40);
+        @media only screen and (max-width: $xl-deck) {
+            height: 652px;
+            width: 502px;
+            @include font(24, 34);
+        }
+        @media only screen and (max-width: $l-deck) {
+            height: 552px;
+            width: 402px;
+            @include font(18, 26);
+        }
+        @media only screen and (max-width: $s-deck) {
+            height: 502px;
+            width: 352px;
+        } 
         .contentHolder {
             box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
             margin: 8px;
-            height: 736px;
+            height: calc(100% - 16px);
             padding: 0 11px;
         }
         .imgHolder {
             @include circle(300);
             background: #C4C4C4;
             margin: 13px auto 30px;
+            @media only screen and (max-width: $xl-deck) {
+                @include circle(250);
+                margin: 10px auto 20px;
+            }
+            @media only screen and (max-width: $s-deck) {
+                @include circle(200);
+                margin: 10px auto 15px;
+            }
         }
         .title {
             color: $main-color;
@@ -270,21 +512,50 @@
     overflow: hidden;
     padding-bottom: 140px;
     position: relative;
+    @media only screen and (max-width: $xl-deck) {
+        padding-bottom: 120px;
+    }
+    @media only screen and (max-width: $s-deck) {
+        padding-bottom: 90px;
+    }
     .swiper-slide {
-        height: 748px; // + 8px shadow
-        //width: 605px;   // + 8px shadow
+        height: 748px; // + 8px shadow  
         text-align: center;
         @include font(30, 40);
+        @media only screen and (max-width: $xl-deck) {
+            height: 648px;
+            @include font(22, 28);
+        }
+        @media only screen and (max-width: $l-deck) {
+            height: 548px;
+        }
+        @media only screen and (max-width: $m-deck) {
+            height: 500px;
+            @include font(18, 24);
+        }
+        @media only screen and (max-width: $s-deck) {
+            height: 548px;
+        }
         .contentHolder {
             box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
             margin: 8px;
-            height: 736px;
+            height: calc(100% - 12px);
             padding: 0 15px;
         }
         .imgHolder {
             @include circle(300);
             background: #C4C4C4;
             margin: 34px auto 30px;
+            @media only screen and (max-width: $xl-deck) {
+                @include circle(250);
+                margin: 20px auto;
+            }
+            @media only screen and (max-width: $l-deck) {
+                @include circle(200);
+            }
+            @media only screen and (max-width: $l-deck) {
+                margin: 5px auto;
+            }
         }
         .title {
             color: $main-color;

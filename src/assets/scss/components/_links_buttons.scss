@@ -23,8 +23,11 @@
   a {
     @include font(50, 60);
     color: $navy-color;
-    @media only screen and (max-width: 1536px) {
+    @media only screen and (max-width: $xl-deck) {
       @include font(40, 50);
+    }
+    @media only screen and (max-width: $m-deck) {
+      @include font(30, 40);
     }
     &:hover {
       color:rgba(0,0,0,0);
@@ -37,11 +40,24 @@
   gap: 100px;
   flex-wrap: nowrap;
   margin-bottom: 15px;
-  a:hover svg {
-    transform: scale(1.1);
-    transition: all .3s ease;
-    path, rect {
-      fill-opacity: 1;
+  @media only screen and (max-width: $xl-deck) {
+    gap: 70px;
+  }
+  a {
+    display: block;
+    &:hover svg {
+      transform: scale(1.1);
+      transition: all .3s ease;
+      path, rect {
+        fill-opacity: 1;
+      }
+    }
+    svg {
+      @media only screen and (max-width: $xl-deck) {
+        width: 120px;
+        height: 120px;
+        display: inline-block;
+      }
     }
   }
 }
@@ -65,9 +81,16 @@
   transition: all 0.8s ease;
   font-family: 'MontserratAlternates-Regular';
   @include font(50, 60);
-  @media only screen and (max-width: 1536px) {
+  @media only screen and (max-width: $xl-deck) {
     @include font(40, 50);
     max-width: 340px;
+  }
+  @media only screen and (max-width: $l-deck) {
+    @include font(30, 40);
+  }
+  @media only screen and (max-width: $m-deck) {
+    height: 80px;
+    max-width: 265px;
   }
   &:hover {
     background-color: #158509;
@@ -99,10 +122,17 @@
 .holderBtnArrow {
   position: sticky;
   bottom: 5%;
-  left: 93%;
+  left: 92%;
   width: 100px;
   height: 100px;
   z-index: 10;
+  @media only screen and (max-width: $m-deck) {
+    left: 90%;
+	}
+  @media only screen and (max-width: $s-deck) {
+    width: 80px;
+    height: 80px;
+	}
   svg {
     display: inline-block;
     width: 100%;
@@ -119,7 +149,7 @@
     }
     &:hover {
       svg {
-        transform: scale(1.25);
+        transform: scale(1.15);
         path {
           fill: #868282;
           

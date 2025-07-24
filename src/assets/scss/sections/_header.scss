@@ -1,15 +1,16 @@
 header#header {
 	z-index: 1000;
 	transition: all 0.1s ease;
-	//position: fixed;
 	background-color: rgba(255, 255, 247, .7);
-	//visibility: hidden;
 	.logo {
 		display: block;
 		img {
 			max-width: 595px;
-			@media only screen and (max-width: 1536px) {
+			@media only screen and (max-width: $xl-deck) {
 				max-width: 440px;
+			}
+			@media only screen and (max-width: $s-deck) {
+				max-width: 340px;
 			}
 		}
 	}
@@ -21,20 +22,35 @@ header#header {
 			justify-content: space-between;
 			align-items: center;
 			height: 240px;
-			@media only screen and (max-width: 1536px) {
+			@media only screen and (max-width: $xl-deck) {
 				height: 190px;
+			}
+			@media only screen and (max-width: $l-deck) {
+				height: 150px;
+			}
+			@media only screen and (max-width: $s-deck) {
+				height: 120px;
 			}
 		}
 	}
 }
 #mainMenu {
 	margin-bottom: 10px;
+	@media only screen and (max-width: $l-deck) {
+		margin-bottom: 5px;
+	}
+	@media only screen and (max-width: $land-tablet) {
+		display: none;
+	}
 	ul {
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-end;
 		gap: 40px;
 		flex-wrap: wrap;
+		@media only screen and (max-width: $l-deck) {
+			gap: 20px;
+		}
 		li {
 			a {
 				position: relative;
@@ -68,12 +84,22 @@ header#header {
 				height: 28px;
 				background-color: $navy-color;
 				transform: translateY(-50%);
+				@media only screen and (max-width: $l-deck) {
+					left: -10px;
+					height: 22px;
+				}
 			}
 		}
 	}
 	a {
 		font-family: 'MontserratAlternates-SemiBold';
 		@include font(28, 28);
+		@media only screen and (max-width: $l-deck) {
+			@include font(22, 24);
+		}
+		@media only screen and (max-width: $s-deck) {
+			@include font(18, 24);
+		}
 	}
 }
 // .header {
@@ -163,9 +189,16 @@ header#header {
 //     }
 // }
 /*--mobile menu--*/
-.hamburger-react {
+.hamburger {
   display: none;
-  @media only screen and (max-width: 768px) {
+  &:hover {
+	.hamburger-inner, 
+	.hamburger-inner::before, 
+	.hamburger-inner::after {
+		background-color: #FFD40E; 
+	}
+  }
+  @media only screen and (max-width: $land-tablet) {
     display: block;
   }
 }

@@ -3,6 +3,9 @@
     position: relative;
     height: 100vh;
     overflow: hidden;
+    .bg-image-holder {
+        height: 100%;
+    }
     .text-holder {
         position: absolute;
         width: 100%;
@@ -13,6 +16,9 @@
             text-align: right;
             margin-bottom: 38px;
             padding-right: 60px;
+            @media only screen and (max-width: $m-deck) {
+                margin-bottom: 28px;
+            }
         }
     }
 }
@@ -25,6 +31,17 @@
             max-width: 540px;
             width: 100%;
             margin: 30px 15px -30px 0;
+            @media only screen and (max-width: $xl-deck) {
+                max-width: 440px;
+            }
+            @media only screen and (max-width: $l-deck) {
+                max-width: 390px;
+                margin: 20px 0 -20px 0;
+            }
+            @media only screen and (max-width: $l-deck) {
+                max-width: 340px;
+                margin: 5px 0 -5px 0;
+            }
     }
 }
 .summerText {
@@ -32,6 +49,17 @@
     font-family: 'MontserratAlternates-SemiBold';
     max-width: 75%;
     margin-bottom: 55px;
+    @media only screen and (max-width: $xl-deck) {
+        @include font(30, 50);
+        margin-bottom: 30px;
+    }
+    @media only screen and (max-width: $l-deck) {
+        @include font(26, 36);
+        margin-bottom: 30px;
+    }
+    @media only screen and (max-width: $l-deck) {
+        max-width: 100%;
+    }
 }
 .why-choose {
     .container {
@@ -40,6 +68,10 @@
         grid-template-columns: 1fr 44%;
         grid-template-rows: auto;
         overflow: hidden;
+        @media only screen and (max-width: $xl-deck) {
+            padding-top: 50px;
+            grid-template-columns: 1fr 45%;
+        }
         .swiper {
             grid-row: span 2;
         }
@@ -55,15 +87,34 @@
             max-width: 600px;
             height: 200px;
             margin-left: 30px;
+            @media only screen and (max-width: $xl-deck) {
+                max-width: 500px;
+                height: 150px;
+                margin-left: 0px;
+            }
+            @media only screen and (max-width: $s-deck) {
+                max-width: 400px;
+                height: 110px;
+                margin-top: 35px;
+            }
         }
     }
 }
 
 .departments .container {
     text-align: center;
-    padding-top: 55px;
+    padding-top: 25px;
+    @media only screen and (max-width: $xl-deck) {
+        padding-top: 0;
+    }
     .h2 {
         margin-bottom: 40px;
+        @media only screen and (max-width: $xl-deck) {
+            margin-bottom: 20px;
+        }
+        @media only screen and (max-width: $s-deck) {
+            margin-bottom: 10px;
+        }
     }
     .btn {
         max-width: 1370px;
@@ -71,17 +122,39 @@
     }
 }
 .price .container  {
-    padding-top: 40px;
+    @media only screen and (max-width: $xl-deck) {
+        padding-top: 20px;
+    }
+    @media only screen and (max-width: $s-deck) {
+        padding-top: 10px;
+    }
 }
 .priceList {
     @include font(50, 45);
     margin: 37px 60px -10px 40px;
     font-family: 'MontserratAlternates-SemiBold';
+    @media only screen and (max-width: $xl-deck) {
+       margin: 25px 20px 0;
+       @include font(36, 38);
+    }
+    @media only screen and (max-width: $l-deck) {
+       margin: 15px 10px 0;
+       @include font(30, 36);
+    }
+    @media only screen and (max-width: $m-deck) {
+        margin: 5px 10px 0;
+    }
     li {
         margin-bottom: 35px;
         border-bottom: 5px solid $blue-light-color;
         display: flex;
         justify-content: space-between;
+        @media only screen and (max-width: $xl-deck) {
+            margin-bottom: 25px;
+        }
+        @media only screen and (max-width: $m-deck) {
+            margin-bottom: 15px;
+        }
     }
     .normalText {
         font-family: 'MontserratAlternates-Regular';
@@ -91,10 +164,24 @@
     display: flex;
     flex-wrap: wrap;
     padding-top: 20px;
+    @media only screen and (max-width: $xl-deck) {
+        gap: 15px 0;
+    }
+    @media only screen and (max-width: $m-deck) {
+        padding-top: 10px;
+    }
     li {
         margin-left: 150px;
         width: calc(50% - 150px);
         position: relative;
+        @media only screen and (max-width: $xl-deck) {
+            margin-left: 130px;
+            width: calc(50% - 130px);
+        }
+        @media only screen and (max-width: $l-deck) {
+            margin-left: 100px;
+            width: calc(50% - 100px);
+        }
         &:nth-child(2n) {
             order: 1;
         }
@@ -112,30 +199,57 @@
             width: 100px;
             height: 100px;
             border-radius: 20px;
+            @media only screen and (max-width: $xl-deck) {
+                top: 10px;
+                left: -100px;
+                width: 80px;
+                height: 80px;
+                @include font(60, 60);
+            }
+            @media only screen and (max-width: $l-deck) {
+                left: -90px;
+            }
         }
     }
 }
 .enterToSchool {
-    //padding-top: 47px;
     .h2 {
         text-align: right;
         padding-right: 73px;
         margin-bottom: 37px;
+        @media only screen and (max-width: $l-deck) {
+            padding-right: 40px;
+            margin-bottom: 30px;
+        }
     }
 }
 .freeDay {
     .rightLogo {
+        gap: 20px;
         .smallLogo {
             margin: -26px 6px 0 0;
+            @media only screen and (max-width: $xl-deck) {
+                margin:0;
+            }
         }
     }
     .rightText {
         display: flex;
         justify-content: flex-end;
         padding-top: 36px;
+        @media only screen and (max-width: $xl-deck) {
+            padding-top: 20px;
+        }
         p {
             width: 64%;
             @include font(50, 60);
+            @media only screen and (max-width: $xl-deck) {
+                @include font(40, 50);
+            }
+            @media only screen and (max-width: $l-deck) {
+                @include font(34, 46);
+                width: 60%;
+            }
         }
     }
 }
@@ -146,8 +260,17 @@
     gap: 32px 60px;
     padding: 66px 20px 0;
     @include font(40, 50);
-    @media only screen and (max-width: 1536px) {
+    @media only screen and (max-width: $xl-deck) {
       @include font(30, 45);
+      padding: 20px 0 0;
+      gap: 20px 30px;
+    }
+    @media only screen and (max-width: $l-deck) {
+      @include font(26, 36);
+    }
+    @media only screen and (max-width: $s-deck) {
+      @include font(24, 32);
+      gap: 10px;
     }
     > div {
         min-height: 250px;
@@ -156,19 +279,41 @@
         align-items: center;
         border-radius: 25px;
         padding: 20px;
+        @media only screen and (max-width: $xl-deck) {
+            min-height: 220px;
+        }
+        @media only screen and (max-width: $l-deck) {
+            min-height: 160px;
+        }
     }
     .bigBox {
         grid-column: span 3;
     }
     .btn {
         height: 100%;
+        max-width: 100%;
         font-family: 'MontserratAlternates-SemiBold';
         @include font(40, 50);
+        @media only screen and (max-width: $xl-deck) {
+            @include font(30, 40);
+        }
+        @media only screen and (max-width: $l-deck) {
+            @include font(28, 36);
+        }
+        @media only screen and (max-width: $s-deck) {
+            @include font(24, 32);
+        }
     }
 }
 .review {
     .container {
         padding-top: 39px;
+        @media only screen and (max-width: $xl-deck) {
+            padding-top: 20px;
+        }
+        @media only screen and (max-width: $m-deck) {
+            padding-top: 10px;
+        }
     }
     .h2 {
         width: 73%;
@@ -181,6 +326,9 @@
 }
 .team .container {
     padding-top: 39px;
+    @media only screen and (max-width: $xl-deck) {
+        padding-top: 20px;
+    }
 }
 .form .container {
     &::after {
@@ -193,16 +341,38 @@
         width: 501px;
         height: 403px;
         z-index: 2;
+        @media only screen and (max-width: $l-deck) {
+            width: 351px;
+            height: 303px;
+        }
+        @media only screen and (max-width: $s-deck) {
+            right: -25px;
+        }
     }
     .h2 {
         text-align: center;
         margin-bottom: 72px;
+        @media only screen and (max-width: $xl-deck) {
+           margin-bottom: 35px;
+        }
+        @media only screen and (max-width: $m-deck) {
+           margin-bottom: 20px;
+        }
     }
-    padding: 10px 0 0 15px;
+    padding: 10px 56px 0 15px;
     background: linear-gradient(to right, rgba(249, 236, 136, .53), rgba(124, 200, 246, .49));
     border-radius: 25px;
     position: relative;
-    margin-top: 64px;
+    margin-top: 40px;
+    @media only screen and (max-width: $xl-deck) {
+        margin-top: 35px;
+    }
+    @media only screen and (max-width: $l-deck) {
+        margin-top: 20px;
+    }
+    @media only screen and (max-width: $s-deck) {
+        padding: 10px 25px 0 15px;
+    }
     .btn {
         max-width: 100%;
         margin-top: -28px;
@@ -210,23 +380,57 @@
         border-radius: 20px;
         font-family: 'MontserratAlternates-SemiBold';
         margin-bottom: 40px;
+        @media only screen and (max-width: $xl-deck) {
+            margin-top: 0;
+            height: 120px;
+        }
+        @media only screen and (max-width: $l-deck) {
+            height: 90px;
+            margin-bottom: 20px;
+        }
     }
     .twoColumns {
         justify-content: space-between;
         > form {
             padding-left: 42px;
-            width: calc(50% + 50px);
+            width: calc(50% - 50px);
             padding-bottom: 25px;
+            @media only screen and (max-width: $xl-deck) {
+                padding-left: 20px;
+                width: calc(50% - 20px);
+            }
+            @media only screen and (max-width: $s-deck) {
+                padding-left: 10px;
+                width: calc(50% - 10px);
+            }
             p {
                 @include font(35, 40);
                 font-family: 'MontserratAlternates-SemiBold';
+                @media only screen and (max-width: $xl-deck) {
+                    @include font(28, 36);
+                }
+                @media only screen and (max-width: $l-deck) {
+                    @include font(26, 34);
+                }
             }
         }
         .imgHolder {
             width: 664px;
             height: 685px;
-            margin-right: 56px;
+            max-width: 50%;
             position: relative;
+            @media only screen and (max-width: $xl-deck) {
+                width: 564px;
+                height: 585px;
+            }
+            @media only screen and (max-width: $l-deck) {
+                width: 514px;
+                height: 535px;
+            }
+            @media only screen and (max-width: $s-deck) {
+                width: 414px;
+                height: 435px;
+            }
             &::before {
                 content: ' ';
                 position: absolute;
@@ -238,8 +442,6 @@
                 width: 100%;
                 height: 100%;
             }
-            
-    
             picture {
                 z-index: 2;
                 border-radius: 25px;

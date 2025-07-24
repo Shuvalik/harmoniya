@@ -897,6 +897,12 @@
           this.setAttribute('name-diraction', 'up');;
         }
       });
+
+       $('#hamburger').on('click', function () {
+        $(this).toggleClass('is-active');
+        $('#mainMenu').slideToggle();
+        $('#mainMenu').toggleClass('open');
+      });
     });
 
     if (Swiper != "undefined") {

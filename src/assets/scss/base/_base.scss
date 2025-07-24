@@ -1,9 +1,9 @@
 
-html{
+html{ 
     scroll-behavior: smooth;
 }
 html, body {
-  width: 100%;
+  width: 100%;  
 }
 body {
     font-family: $base-font;
@@ -13,8 +13,14 @@ body {
     font-family: 'MontserratAlternates-Regular';
     scroll-behavior: smooth;
     position: relative;
-    @media only screen and (max-width: 1536px) {
+    @media only screen and (max-width: $xl-deck) {
       @include font(30, 45);
+    }
+    @media only screen and (max-width: $l-deck) {
+      @include font(26, 36);
+    }
+    @media only screen and (max-width: $s-deck) {
+      @include font(24, 32);
     }
 } 
 .container {
@@ -22,14 +28,14 @@ body {
     max-width: $base-width;
     margin-inline: auto;
     //margin: 0 auto;
-    @media only screen and (max-width: 1920px) {
+    @media only screen and (max-width: $xl-deck) {
       margin: 0 $space-container;
       max-width: calc(100% - 100px);
     }
-    // @media only screen and (max-width: 660px) {
-    //   margin: 0 15px;
-    //   max-width: calc(100% - 30px);
-    // }
+    @media only screen and (max-width: $s-deck) {
+      margin: 0 25px;
+      max-width: calc(100% - 50px);
+    }
 }
 header {
   position: absolute;
@@ -50,13 +56,20 @@ main {
   flex-grow: 1;
   > :first-child {
     padding-top: 240px;
-    @media only screen and (max-width: 1536px) {
+    @media only screen and (max-width: $xl-deck) {
       padding-top: 190px;
+    }
+    @media only screen and (max-width: $l-deck) {
+      padding-top: 150px;
+    }
+    @media only screen and (max-width: $s-deck) {
+      padding-top: 120px;
     }
   }
   > section {
     min-height: 100vh;
     padding-top: 1px;
+    overflow: hidden; /*!!!*/
   }
 }
 .twoColumns {
@@ -65,12 +78,6 @@ main {
         width: 50%;
     }
 }
-// .page-wrapper section {
-//   padding: $main-space 0;
-//   @media only screen and (max-width: 1020px) {
-//     padding: $main-space-tb 0;
-//   }
-// }
 // .twoColumns {
 //     display: flex;
 //     justify-content: space-between;
@@ -102,6 +109,9 @@ a {
 }
 p {
   margin-bottom: 15px;
+  @media only screen and (max-width: $s-deck) {
+    margin-bottom: 5px;
+  }
 }
 strong {
   font-family: 'MontserratAlternates-SemiBold';
@@ -116,8 +126,17 @@ strong {
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
-    @media only screen and (max-width: 1200px) {
-    }
+  @media only screen and (max-width: $xl-deck) {
+    @include font(80, 90);
+    -webkit-text-stroke: unset;
+    text-stroke: unset;
+    -webkit-background-clip: unset;
+    -moz-background-clip: unset;
+    background-clip: unset;
+  }
+  @media only screen and (max-width: $m-deck) {
+    @include font(60, 70);
+	}
     @media only screen and (max-width: 960px) {
     }
 }
@@ -125,9 +144,14 @@ strong {
   @include font(90, 110);
   font-family: 'MontserratAlternates-SemiBold';
   color: $navy-color;
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: $xl-deck) { 
+    @include font(70, 80);
   }
-  @media only screen and (max-width: 660px) {
+  @media only screen and (max-width: $l-deck) { 
+    @include font(60, 70);
+  }
+  @media only screen and (max-width: $s-deck) { 
+    @include font(50, 60);
   }
 }
 // .h3 {
@@ -142,9 +166,18 @@ strong {
   @include font(50, 60);
   font-family: 'MontserratAlternates-SemiBold';
   margin-bottom: 20px;
-    @media only screen and (max-width: 1200px) {
-      //@include font(18, 28);
-    }
+  @media only screen and (max-width: $xl-deck) {
+    @include font(40, 50);
+    margin-bottom: 10px;
+  }
+  @media only screen and (max-width: $l-deck) {
+    @include font(30, 38);
+    margin-bottom: 10px;
+  }
+  @media only screen and (max-width: $s-deck) {
+    @include font(22, 28);
+    margin-bottom: 0;
+  }
 }
 .markGreenColor {
   color: $main-color;
@@ -159,11 +192,25 @@ strong {
   @include font(100, 110);
   font-family: 'MontserratAlternates-Bold';
   padding-left: 43px;
+  @media only screen and (max-width: $xl-deck) { 
+    @include font(70, 80);
+    padding-left: 43px;
+  }
+  @media only screen and (max-width: $s-deck) { 
+    @include font(60, 70);
+    padding-left: 23px;
+  }
 }
 .pointArrow {
   @include font(70, 70);
   font-family: 'Caveat-Regular';
   position: relative;
+  @media only screen and (max-width: $xl-deck) {
+    @include font(56, 60);
+  }
+  @media only screen and (max-width: $s-deck) {
+    @include font(40, 40);
+  }
   span {
     transform: rotate(2.53deg);
     display: inline-block;
@@ -171,6 +218,12 @@ strong {
   .desc_show {
     display: block;
     width: 100%;
+    @media only screen and (max-width: $xl-deck) {
+      min-width: 350px;
+    }
+    @media only screen and (max-width: $s-deck) {
+      max-width: 350px;
+    }
   }
 }
 .rightText {
