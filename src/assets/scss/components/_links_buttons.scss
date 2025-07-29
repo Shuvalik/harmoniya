@@ -4,6 +4,9 @@
   background-clip: text;
   -webkit-background-clip:text;
   position: relative;
+  @media only screen and (max-width: $land-tablet) {
+    text-align: right;
+  }
   &::after {
       content: '';
       width: 0;
@@ -132,6 +135,7 @@
   @media only screen and (max-width: $s-deck) {
     width: 80px;
     height: 80px;
+    left: calc(100vw - 105px);
 	}
   svg {
     display: inline-block;

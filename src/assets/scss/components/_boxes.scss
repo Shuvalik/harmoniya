@@ -15,6 +15,9 @@
         @include font(22, 28);
         gap: 20px;
     }
+    @media only screen and (max-width: $land-tablet) {
+        flex-wrap: wrap;
+    }
     > div {
         background-color: $yellow-light-color;
         border-radius: 25px;
@@ -33,6 +36,9 @@
         }
         @media only screen and (max-width: $s-deck) {
             width: calc(25% - 15px);
+        }
+        @media only screen and (max-width: $land-tablet) {
+            width: calc(50% - 15px);
         }
         svg {
             height: 100px;
@@ -115,6 +121,9 @@
                 max-height: 200px;
                 margin-bottom: 5px;
             }
+            @media only screen and (max-width: $land-tablet) {
+                min-height: 300px;
+            }
             img {
                 aspect-ratio: 373/447 auto;
                 transition: all 0.6s ease;
@@ -162,15 +171,26 @@
         gap: 35px 30px;
         margin: 0 0 30px;
     }
+    @media only screen and (max-width: $land-tablet) {
+        flex-direction: column;
+        gap: 35px 0;
+    }
     li {
         position: relative;
         display: flex;
         gap: 25px;
         flex-basis: calc(50% + 30px);
+        @media only screen and (max-width: $land-tablet) {
+            align-self: flex-end;
+            width: 75%;
+        }
         &:nth-child(odd) {
             flex-basis: calc(50% - 85px);
             @media only screen and (max-width: $m-deck) {
                 flex-basis: calc(50% - 70px);
+            }
+            @media only screen and (max-width: $land-tablet) {
+                align-self: flex-start;
             }
         }
         &:first-child::after {
@@ -187,6 +207,17 @@
                 height: 81px; 
                 right: -50px;
                 top: -20px; 
+            }
+            @media only screen and (max-width: $land-tablet) {
+                background-image: url("./../../assets/images/step-1-2-mob.svg");
+                left: 35px;
+                right: auto;
+                top: auto;
+                bottom: -95px;
+                width: 109px;
+                height: 101px;
+                //width: 59px;
+                //height: 51px;
             }
         }
         &:nth-child(3) {
@@ -205,6 +236,16 @@
                     right: -56px;
                     top: -54px;
                 }
+                @media only screen and (max-width: $land-tablet) {
+                    background-image: url("./../../assets/images/step-2-3-mob.svg");
+                    width: 114px;
+                    height: 93px;
+                    right: auto;
+                    top: -85px;
+                    left: 60px;
+                    //width: 64px;
+                    //height: 43px;
+                }
             }
             &::before {
                 content: ' ';
@@ -218,6 +259,16 @@
                 @media only screen and (max-width: $l-deck) {
                     width: 143px;
                     right: -20px;
+                }
+                @media only screen and (max-width: $land-tablet) {
+                    background-image: url("./../../assets/images/step-3-4-mob.svg");
+                    bottom: -100px;
+                    left: 55px;
+                    right: auto;
+                    width: 141px;
+                    height: 135px;
+                    //width: 91px;
+                    //height: 85px;
                 }
             }
         }
@@ -274,6 +325,11 @@
         gap: 15px 30px;
         @include font(24, 30);
     }
+    @media only screen and (max-width: $land-tablet) {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 15px 0;
+    }
     li {
         padding: 0 0 0 78px;
         position: relative;
@@ -291,6 +347,9 @@
             @media only screen and (max-width: $s-deck) {
                 width: calc(37% - 50px);
             }
+            @media only screen and (max-width: $land-tablet) {
+                width: 100%;
+            }
         }
         &:nth-child(even) {
             width: calc(63% - 78px);
@@ -300,6 +359,9 @@
             @media only screen and (max-width: $s-deck) {
                 width: calc(63% - 50px);
             };
+            @media only screen and (max-width: $land-tablet) {
+                width: 100%;
+            }
         }
         &::before {
             content: ' ';
@@ -330,6 +392,9 @@
     @media only screen and (max-width: $m-deck) {
         padding: 15px 20px 0 0;
     }
+    @media only screen and (max-width: $land-tablet) {
+        padding-right: 0;
+    }
     li {
         display: flex;
         justify-content: space-between;
@@ -347,6 +412,10 @@
         @media only screen and (max-width: $s-deck) {
             gap: 15px;
             @include font(22, 28);
+        }
+        @media only screen and (max-width: $land-tablet) {
+            @include font(20, 26);
+            justify-content: flex-start;
         }
         .iconHolder {
             @include circle(100);
@@ -387,6 +456,9 @@
         width: 300px;
         height: 500px;
 	}
+    @media only screen and (max-width: $land-tablet) {
+        margin-bottom: 100px;
+    }
     .swiper-slide {
         display: flex;
         align-items: center;
@@ -420,12 +492,12 @@
         right: auto;
         transform: translateY(-75px);
         @include circle(100);
+        background: #D9D9D9;
         @media only screen and (max-width: $s-deck) {
             @include circle(75);
             left: -135px;
             transform: translateY(-65px);
         }
-        background: #D9D9D9;
         &:hover {
             background: #868282;
         }
@@ -437,6 +509,19 @@
         transform: translateY(65px);
         @media only screen and (max-width: $s-deck) {
             transform: translateY(55px);
+        }
+    }
+}
+@media only screen and (max-width: $land-tablet) {
+    .swiper {
+        .swiper-button-prev, .swiper-button-next {
+            left: 50%;
+            bottom: 0;
+            top: auto;
+            transform: translate(-85px, 100px) rotate(-90deg);
+        }
+        .swiper-button-next {
+            transform: translate(20px, 100px) rotate(-90deg);
         }
     }
 }
@@ -478,6 +563,9 @@
             height: 502px;
             width: 352px;
         } 
+        @media only screen and (max-width: $land-tablet) {
+            margin-inline: auto;
+        }
         .contentHolder {
             box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
             margin: 8px;

@@ -65,6 +65,9 @@ main {
     @media only screen and (max-width: $s-deck) {
       padding-top: 120px;
     }
+    @media only screen and (max-width: $land-tablet) {
+      padding-top: 220px;
+    }
   }
   > section {
     min-height: 100vh;
@@ -74,8 +77,14 @@ main {
 }
 .twoColumns {
     display: flex;
+    @media only screen and (max-width: $land-tablet) {
+      flex-direction: column;
+    }
     > * {
         width: 50%;
+        @media only screen and (max-width: $land-tablet) {
+          width: 100%;
+        }
     }
 }
 // .twoColumns {
@@ -153,6 +162,9 @@ strong {
   @media only screen and (max-width: $s-deck) { 
     @include font(50, 60);
   }
+  @media only screen and (max-width: $land-tablet) {
+    @include font(40, 50);
+  }
 }
 // .h3 {
 //   font-weight: 600;
@@ -204,7 +216,6 @@ strong {
 .pointArrow {
   @include font(70, 70);
   font-family: 'Caveat-Regular';
-  position: relative;
   @media only screen and (max-width: $xl-deck) {
     @include font(56, 60);
   }
@@ -214,6 +225,12 @@ strong {
   span {
     transform: rotate(2.53deg);
     display: inline-block;
+    @media only screen and (max-width: $land-tablet) {
+      transform: rotate(-28.61deg);
+      position: relative;
+      top: 60px;
+      right: 0;
+    }
   }
   .desc_show {
     display: block;
@@ -223,6 +240,9 @@ strong {
     }
     @media only screen and (max-width: $s-deck) {
       max-width: 350px;
+    }
+    @media only screen and (max-width: $land-tablet) {
+      display: none;
     }
   }
 }

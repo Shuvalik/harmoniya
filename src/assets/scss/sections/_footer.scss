@@ -17,6 +17,10 @@
         @media only screen and (max-width: $s-deck) {
             @include font(30, 35);
         }
+        @media only screen and (max-width: $land-tablet) {
+            text-align: center;
+            @include font(26, 32);
+        }
     }
     address {
         background: $yellow-light-color;
@@ -33,6 +37,9 @@
         @media only screen and (max-width: $s-deck) {
             padding: 10px 0 1px 10px;
         }
+        @media only screen and (max-width: $land-tablet) {
+            margin: 0;
+        }
         a {
             font-family: 'MontserratAlternates-SemiBold';
             @include font(35, 40);
@@ -47,6 +54,9 @@
             }
             @media only screen and (max-width: $s-deck) {
                 @include font(24, 32);
+            }
+            @media only screen and (max-width: $land-tablet) {
+                @include font(20, 28);
             }
             &::after {
                 content: '';
@@ -99,6 +109,12 @@
         @media only screen and (max-width: $m-deck) {
             padding: 20px 30px 1px;
         }
+        @media only screen and (max-width: $land-tablet) {
+            padding: 20px 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         .titleBox {
             margin-bottom: 45px;
             @media only screen and (max-width: $xl-deck) {
@@ -135,10 +151,28 @@
         @media only screen and (max-width: $l-deck) {
             width: 40%;
         }
+        @media only screen and (max-width: $land-tablet) {
+            width: 100%;
+            display: flex;
+            gap: 4%;
+            > * {
+                width: 48%;
+                &.bigLogo {
+                    width: 100%;
+                }
+            }
+
+        }
         &.logoHolder {
             width: 62%;
             @media only screen and (max-width: $l-deck) {
                 width: 60%;
+            }
+            @media only screen and (max-width: $land-tablet) {
+                width: 100%;
+                /*.bigLogo {
+                    height: 120px;///!!!
+                }*/
             }
         } 
     }

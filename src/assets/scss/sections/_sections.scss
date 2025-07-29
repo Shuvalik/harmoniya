@@ -72,15 +72,36 @@
             padding-top: 50px;
             grid-template-columns: 1fr 45%;
         }
+        @media only screen and (max-width: $land-tablet) {
+            grid-template-columns: 1fr;
+            gap: 20px;
+            height: 100vh;
+        }
         .swiper {
             grid-row: span 2;
+            @media only screen and (max-width: $land-tablet) {
+                grid-row: auto;
+            }
         }
         .button-markHolder {
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            .pointArrow {
-                align-self: flex-end;
+            position: relative;
+            @media only screen and (max-width: $land-tablet) {
+                flex-direction: row;
+                margin-bottom: 20px;
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 190px;
+                    height: 266px;
+                    right: 35px;
+                    top: -135px;
+                    background: url("./../../assets/images/loop-arrow.svg") 0 0 no-repeat ;
+                    background-size: contain;
+                }
             }
         }
         .btn {
@@ -149,6 +170,7 @@
         border-bottom: 5px solid $blue-light-color;
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
         @media only screen and (max-width: $xl-deck) {
             margin-bottom: 25px;
         }
@@ -158,6 +180,9 @@
     }
     .normalText {
         font-family: 'MontserratAlternates-Regular';
+        @media only screen and (max-width: $land-tablet) {
+            display: block;
+        }
     }
 }
 .discountList {
@@ -221,9 +246,18 @@
             padding-right: 40px;
             margin-bottom: 30px;
         }
+        @media only screen and (max-width: $land-tablet) {
+            padding: 0;
+            margin-bottom: 20px;
+        }
     }
 }
 .freeDay {
+    .container {
+        @media only screen and (max-width: $land-tablet) {
+            height: 100vh;
+        }
+    }
     .rightLogo {
         gap: 20px;
         .smallLogo {
@@ -250,6 +284,9 @@
                 @include font(34, 46);
                 width: 60%;
             }
+            @media only screen and (max-width: $land-tablet) {
+                width: 100%;
+            }
         }
     }
 }
@@ -272,6 +309,10 @@
       @include font(24, 32);
       gap: 10px;
     }
+    @media only screen and (max-width: $land-tablet) {
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2, auto) minmax(100px, 100%);
+    }
     > div {
         min-height: 250px;
         text-align: center;
@@ -285,9 +326,15 @@
         @media only screen and (max-width: $l-deck) {
             min-height: 160px;
         }
+        @media only screen and (max-width: $land-tablet) {
+            min-height: auto;
+        }
     }
     .bigBox {
         grid-column: span 3;
+        @media only screen and (max-width: $land-tablet) {
+            grid-column: span 2;
+        }
     }
     .btn {
         height: 100%;
@@ -303,6 +350,9 @@
         @media only screen and (max-width: $s-deck) {
             @include font(24, 32);
         }
+        @media only screen and (max-width: $land-tablet) {
+            grid-column: span 3;
+        }
     }
 }
 .review {
@@ -317,10 +367,16 @@
     }
     .h2 {
         width: 73%;
+        @media only screen and (max-width: $land-tablet) {
+            width: 100%;
+        }
     }
     .twoColumns {
         .swiper2 {
             width: 44%;
+            @media only screen and (max-width: $land-tablet) {
+                width: calc(100% - 80px); // 80px space for paginator
+            }
         }
     }
 }
@@ -328,6 +384,11 @@
     padding-top: 39px;
     @media only screen and (max-width: $xl-deck) {
         padding-top: 20px;
+    }
+    .h2 {
+        @media only screen and (max-width: $land-tablet) {
+            margin-bottom: 25px;
+        }
     }
 }
 .form .container {
@@ -347,6 +408,9 @@
         }
         @media only screen and (max-width: $s-deck) {
             right: -25px;
+        }
+        @media only screen and (max-width: $land-tablet) {
+            bottom: 50%;
         }
     }
     .h2 {
@@ -391,6 +455,10 @@
     }
     .twoColumns {
         justify-content: space-between;
+        @media only screen and (max-width: $land-tablet) {
+            flex-direction: column-reverse;
+            gap: 35px;
+        }
         > form {
             padding-left: 42px;
             width: calc(50% - 50px);
@@ -402,6 +470,9 @@
             @media only screen and (max-width: $s-deck) {
                 padding-left: 10px;
                 width: calc(50% - 10px);
+            }
+            @media only screen and (max-width: $land-tablet) {
+                width: calc(100% - 10px);
             }
             p {
                 @include font(35, 40);
@@ -430,6 +501,13 @@
             @media only screen and (max-width: $s-deck) {
                 width: 414px;
                 height: 435px;
+            }
+            @media only screen and (max-width: $land-tablet) {
+                align-self: center;
+                //width: 217px;
+                //height: 250px;
+                width: 257px;
+                height: 300px;
             }
             &::before {
                 content: ' ';
