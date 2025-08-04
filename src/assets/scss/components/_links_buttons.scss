@@ -32,6 +32,9 @@
     @media only screen and (max-width: $m-deck) {
       @include font(30, 40);
     }
+    @media only screen and (max-width: $tablet) {
+      @include font(20, 30);
+    }
     &:hover {
       color:rgba(0,0,0,0);
     }
@@ -45,6 +48,10 @@
   margin-bottom: 15px;
   @media only screen and (max-width: $xl-deck) {
     gap: 70px;
+  }
+  @media only screen and (max-width: $tablet) {
+    gap: 15px;
+    margin-bottom: 10px;
   }
   a {
     display: block;
@@ -60,6 +67,10 @@
         width: 120px;
         height: 120px;
         display: inline-block;
+      }
+      @media only screen and (max-width: $tablet) {
+        width: 50px;
+        height: 50px;
       }
     }
   }
@@ -94,6 +105,11 @@
   @media only screen and (max-width: $m-deck) {
     height: 80px;
     max-width: 265px;
+  }
+  @media only screen and (max-width: $tablet) {
+    @include font(13, 18);
+    height: 43px;
+    max-width: 113px;
   }
   &:hover {
     background-color: #158509;

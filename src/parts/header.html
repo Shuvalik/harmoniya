@@ -2,7 +2,12 @@
   <div class="headerMain">
       <div class="container">
         <a href="/" class="logo">
-          <img src="@@webRoot/assets/images/logo.png" />
+          <picture>
+            <source media="(max-width: 767px)" data-srcset="@@webRoot/assets/images/logo-mob.png" 
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="/>
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy"
+              data-src="@@webRoot/assets/images/logo.png" />
+          </picture>
         </a>
         <div class="phone">
           <a href="tel:+380676998752">

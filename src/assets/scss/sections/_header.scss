@@ -45,6 +45,7 @@ header#header {
 				}
 				#hamburger {
 					flex-basis: 97px;
+					margin-right: -15px;
 				}
 				.holderButton {
 					flex-basis: calc(100% - 97px);
@@ -54,6 +55,18 @@ header#header {
 					.btn {
 						max-width: 100%;
 					}
+				}
+			}
+			@media only screen and (max-width: $tablet) {
+				height: 130px;
+				.phone {
+					order: 2;
+				}
+				.holderButton {
+					flex-basis: auto;
+					min-width: 113px;
+					order: 2;
+					padding: 0;
 				}
 			}
 		}
@@ -71,6 +84,9 @@ header#header {
 		background-color: $white-color;
 		max-width: 100%;
 		border-top: 1px solid #FFD40E;
+	}
+	@media only screen and (max-width: $tablet) {
+		padding: 20px 0;
 	}
 	ul {
 		display: flex;
@@ -94,6 +110,9 @@ header#header {
 				@media only screen and (max-width: $land-tablet) {
 					display: block;
 					padding: 30px 60px;
+				}
+				@media only screen and (max-width: $tablet) {
+					padding: 25px 40px;
 				}
 				&::before {
 					content: '';
@@ -151,6 +170,9 @@ header#header {
 		}
 		@media only screen and (max-width: $land-tablet) {
 			@include font(40, 40);
+		}
+		@media only screen and (max-width: $tablet) {
+			@include font(30, 30);
 		}
 	}
 }
@@ -251,6 +273,9 @@ header#header {
   }
   @media only screen and (max-width: $land-tablet) {
     display: block;
+  }
+  @media only screen and (max-width: $tablet) {
+	order: 1;
   }
 }
 .overlight {

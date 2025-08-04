@@ -3,6 +3,9 @@
     position: relative;
     height: 100vh;
     overflow: hidden;
+    @media only screen and (max-width: $tablet) { 
+        height: auto;
+    }
     .bg-image-holder {
         height: 100%;
     }
@@ -17,7 +20,7 @@
             margin-bottom: 38px;
             padding-right: 60px;
             @media only screen and (max-width: $m-deck) {
-                margin-bottom: 28px;
+                margin-bottom: 25px;
             }
         }
     }
@@ -42,6 +45,10 @@
                 max-width: 340px;
                 margin: 5px 0 -5px 0;
             }
+            @media only screen and (max-width: $tablet) {
+                max-width: max-content;
+                margin: 0;
+            }
     }
 }
 .summerText {
@@ -60,6 +67,9 @@
     @media only screen and (max-width: $l-deck) {
         max-width: 100%;
     }
+    @media only screen and (max-width: $tablet) { 
+        @include font(10, 20);
+    }
 }
 .why-choose {
     .container {
@@ -75,7 +85,7 @@
         @media only screen and (max-width: $land-tablet) {
             grid-template-columns: 1fr;
             gap: 20px;
-            height: 100vh;
+            min-height: 100vh;
         }
         .swiper {
             grid-row: span 2;
@@ -255,7 +265,7 @@
 .freeDay {
     .container {
         @media only screen and (max-width: $land-tablet) {
-            height: 100vh;
+            min-height: 100vh;
         }
     }
     .rightLogo {

@@ -36,6 +36,10 @@ body {
       margin: 0 25px;
       max-width: calc(100% - 50px);
     }
+    @media only screen and (max-width: $tablet) {
+      margin: 0 15px;
+      max-width: calc(100% - 30px);
+    }
 }
 header {
   position: absolute;
@@ -68,11 +72,17 @@ main {
     @media only screen and (max-width: $land-tablet) {
       padding-top: 220px;
     }
+    @media only screen and (max-width: $land-tablet) {
+      padding-top: 130px;
+    }
   }
   > section {
     min-height: 100vh;
     padding-top: 1px;
     overflow: hidden; /*!!!*/
+    @media only screen and (max-width: $tablet) {
+      min-height: auto;
+    }
   }
 }
 .twoColumns {
@@ -137,17 +147,18 @@ strong {
   background-clip: text;
   @media only screen and (max-width: $xl-deck) {
     @include font(80, 90);
-    -webkit-text-stroke: unset;
+    /*-webkit-text-stroke: unset;
     text-stroke: unset;
     -webkit-background-clip: unset;
     -moz-background-clip: unset;
-    background-clip: unset;
+    background-clip: unset;*/
   }
   @media only screen and (max-width: $m-deck) {
     @include font(60, 70);
 	}
-    @media only screen and (max-width: 960px) {
-    }
+  @media only screen and (max-width: $tablet) { 
+    @include font(20, 30);
+  }
 }
 .h2 {
   @include font(90, 110);
@@ -164,6 +175,9 @@ strong {
   }
   @media only screen and (max-width: $land-tablet) {
     @include font(40, 50);
+  }
+  @media only screen and (max-width: $tablet) { 
+    @include font(20, 30);
   }
 }
 // .h3 {

@@ -41,7 +41,12 @@
   <div class="headerMain">
       <div class="container">
         <a href="/" class="logo">
-          <img src="./assets/images/logo.png" />
+          <picture>
+            <source media="(max-width: 767px)" data-srcset="./assets/images/logo-mob.png" 
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="/>
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy"
+              data-src="./assets/images/logo.png" />
+          </picture>
         </a>
         <div class="phone">
           <a href="tel:+380676998752">
@@ -77,15 +82,13 @@
 
     <main>
       <section id="main-part" class="campaign">
-        <div id="first-bg" class="bg-image-holder lazy" data-bg="assets/images/bg-header.jpg">
+        <div id="first-bg" class="bg-image-holder">
           <picture>
-            <!-- <source data-srcset="assets/images/mob-bg-why-section.jpg" media="(max-width: 767px)"
-              srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==">
-            <source data-srcset="assets/images/tab-bg-why-section.jpg" media="(max-width: 1023px)"
-              srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==">
-            <img class="lazy" data-src="assets/images/bg-why-section.jpg" alt=""
-              src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="> -->
-            <img src="./assets/images/Foto@3x.jpg" />
+            <source media="(min-width: 768px)"
+              data-srcset="./assets/images/foto.jpg 1x, ./assets/images/foto@2x.jpg 2x, ./assets/images/foto@3x.jpg 3x" />
+            <source media="(min-width: 360px)" data-srcset="./assets/images/foto-mob.jpg" />
+            <img class="lazy" data-src="./assets/images/foto@3x.jpg"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" />
           </picture>
         </div>
         <div class="text-holder ">
@@ -132,7 +135,12 @@
           <div class="rightLogo">
             <h2 class="h2"><span class="markGreenColor">Хто </span>ми?</h2>
             <a href="/" class="smallLogo">
-              <img src="./assets/images/minLogo.png" />
+              <picture>
+                <source media="(max-width: 767px)" data-srcset="./assets/images/minLogo-mob.png"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" />
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy"
+                  data-src="./assets/images/minLogo.png" />
+              </picture>
             </a>
           </div>
           <div class="summerText">
@@ -280,7 +288,7 @@
             <div class="boxLink">
               <div class="imgHolder">
                 <a href="/" class="maskLink"></a>
-                <img src="./assets/images/content-image/box-img1.jpg" alt="Садочок 3-6 років" />
+                <img data-src="./assets/images/content-image/box-img1.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" alt="Садочок 3-6 років" class="lazy" />
               </div>
               <div class="item-text">
                 <div class="title-box">
@@ -293,7 +301,7 @@
             <div class="boxLink">
               <div class="imgHolder">
                 <a href="/" class="maskLink"></a>
-                <img src="./assets/images/content-image/box-img2.jpg" alt="Початкова школа" />
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="./assets/images/content-image/box-img2.jpg" alt="Початкова школа" class="lazy" />
               </div>
               <div class="item-text">
                 <div class="title-box">
@@ -306,7 +314,7 @@
             <div class="boxLink">
               <div class="imgHolder">
                 <a href="/" class="maskLink"></a>
-                <img src="./assets/images/content-image/box-img3.jpg" alt="Середня школа" />
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" alt="Середня школа" data-src="./assets/images/content-image/box-img3.jpg" class="lazy" />
               </div>
               <div class="item-text">
                 <div class="title-box">
@@ -319,7 +327,7 @@
             <div class="boxLink">
               <div class="imgHolder">
                 <a href="/" class="maskLink"></a>
-                <img src="./assets/images/content-image/box-img4.jpg" alt="Старша школа" />
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="./assets/images/content-image/box-img4.jpg" alt="Старша школа" class="lazy" />
               </div>
               <div class="item-text">
                 <div class="title-box">
@@ -452,7 +460,12 @@
           <div class="rightLogo">
             <h2 class="h2">Спробуйте <span class="markBlueColor">безкоштовний </span>день!</h2>
             <a href="/" class="smallLogo">
-              <img src="./assets/images/minLogo.png" />
+              <picture>
+                <source media="(max-width: 479px)" data-srcset="./assets/images/minLogo-mob.png"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" />
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy"
+                  data-src="./assets/images/minLogo.png" />
+              </picture>
             </a>
           </div>
           <div class="rightText">
@@ -896,13 +909,8 @@
             </form>
             <div class="imgHolder">
               <picture>
-                <!-- <source data-srcset="assets/images/mob-bg-why-section.jpg" media="(max-width: 767px)"
-                            srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==">
-                          <source data-srcset="assets/images/tab-bg-why-section.jpg" media="(max-width: 1023px)"
-                            srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==">
-                          <img class="lazy" data-src="assets/images/bg-why-section.jpg" alt=""
-                            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="> -->
-                <img src="./assets/images/contact-img.jpg" />
+                <source media="(max-width: 767px)" data-srcset="./assets/images/contact-img-mob.jpg" />
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="./assets/images/contact-img.jpg" class="lazy" />
               </picture>
             </div>
           </div>
@@ -915,7 +923,13 @@
     <div class="twoColumns">
       <div class="logoHolder">
         <a href="/" class="bigLogo">
-          <img src="./assets/images/logoFoter.png" />
+          <picture>
+            <source media="(max-width: 767px)" data-srcset="./assets/images/logoFoter-mob.png"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" />
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy"
+              data-src="./assets/images/logoFoter.png" />
+          </picture>
+
         </a>
       </div>
       <div>
@@ -1027,6 +1041,7 @@
       /*call functions */
 
       new WOW().init();
+      let lazyLoadInstance = new LazyLoad();
       /* events defenition */
       $('a[data-scroll]').on('click', function (e) {
         e.preventDefault();

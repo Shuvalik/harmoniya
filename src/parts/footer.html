@@ -3,7 +3,13 @@
     <div class="twoColumns">
       <div class="logoHolder">
         <a href="/" class="bigLogo">
-          <img src="@@webRoot/assets/images/logoFoter.png" />
+          <picture>
+            <source media="(max-width: 767px)" data-srcset="@@webRoot/assets/images/logoFoter-mob.png"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" />
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy"
+              data-src="@@webRoot/assets/images/logoFoter.png" />
+          </picture>
+
         </a>
       </div>
       <div>
