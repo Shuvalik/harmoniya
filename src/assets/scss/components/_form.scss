@@ -21,6 +21,9 @@ input {
         @include font(28, 46);
         padding: 10px 10px;
     }
+    @media only screen and (max-width: $tablet) {
+        @include font(22, 28);
+    }
     &::placeholder {
         color: $grey-color;
     }
@@ -49,6 +52,9 @@ input:focus {
         }
         @media only screen and (max-width: $s-deck) {
             @include font(24, 32);
+        }
+        @media only screen and (max-width: $tablet) {
+            @include font(20, 26);
         }
     }
     input:-webkit-autofill,

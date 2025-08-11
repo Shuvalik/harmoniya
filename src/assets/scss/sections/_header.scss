@@ -12,6 +12,9 @@ header#header {
 			@media only screen and (max-width: $s-deck) {
 				max-width: 340px;
 			}
+			@media only screen and (max-width: $tablet) {
+				max-width: 225px;
+			}
 		}
 	}
 	.holderButton {
@@ -64,11 +67,17 @@ header#header {
 				}
 				.holderButton {
 					flex-basis: auto;
-					min-width: 113px;
+					min-width: 160px;
 					order: 2;
 					padding: 0;
 				}
 			}
+			@media only screen and (max-width: $mobile) {
+				.holderButton {
+					min-width: 113px;
+				}
+			}
+
 		}
 	}
 }

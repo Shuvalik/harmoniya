@@ -35,6 +35,9 @@
     @media only screen and (max-width: $tablet) {
       @include font(20, 30);
     }
+    @media only screen and (max-width: $mobile) {
+      @include font(16, 24);
+    }
     &:hover {
       color:rgba(0,0,0,0);
     }
@@ -107,8 +110,12 @@
     max-width: 265px;
   }
   @media only screen and (max-width: $tablet) {
-    @include font(13, 18);
+    @include font(18, 26);
     height: 43px;
+    //max-width: 160px;
+  }
+  @media only screen and (max-width: $mobile) {
+    @include font(13, 18);
     max-width: 113px;
   }
   &:hover {
@@ -153,6 +160,9 @@
     height: 80px;
     left: calc(100vw - 105px);
 	}
+  @media only screen and (max-width: $tablet) {
+    display: none;
+  }
   svg {
     display: inline-block;
     width: 100%;

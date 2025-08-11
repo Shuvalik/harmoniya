@@ -22,6 +22,10 @@
             @media only screen and (max-width: $m-deck) {
                 margin-bottom: 25px;
             }
+            @media only screen and (max-width: $mobile) {
+                padding: 0;
+                margin-bottom: 5px;
+            }
         }
     }
 }
@@ -68,7 +72,14 @@
         max-width: 100%;
     }
     @media only screen and (max-width: $tablet) { 
+        @include font(18, 26);
+        margin-bottom: 10px;
+    }
+    @media only screen and (max-width: $mobile) { 
         @include font(10, 20);
+    }
+    .mobSmallLogo {
+        float: right;
     }
 }
 .why-choose {
@@ -87,10 +98,29 @@
             gap: 20px;
             min-height: 100vh;
         }
+        @media only screen and (max-width: $tablet) {
+            padding-top: 15px;
+            gap: 0;
+        }
+        @media only screen and (max-width: $mobile) {
+            min-height: auto;
+        }
+        .h2 {
+            @media only screen and (max-width: $mobile) {
+                margin-bottom: 10px;
+            }
+        }
         .swiper {
             grid-row: span 2;
             @media only screen and (max-width: $land-tablet) {
                 grid-row: auto;
+            }
+            svg {
+                @media only screen and (max-width: $tablet) {
+                    display: block;
+                    width: 50px;
+                    height: 50px;
+                }
             }
         }
         .button-markHolder {
@@ -111,8 +141,20 @@
                     top: -135px;
                     background: url("./../../assets/images/loop-arrow.svg") 0 0 no-repeat ;
                     background-size: contain;
+                    @media only screen and (max-width: $mobile) {
+                        width: 167px;
+                        height: 176px;
+                        right: -28px;
+                        top: -150px;
+                    }  
                 }
             }
+            @media only screen and (max-width: $tablet) {
+                justify-content: space-between;
+            }      
+            @media only screen and (max-width: $mobile) {
+                margin-top: 20px;
+            }         
         }
         .btn {
             max-width: 600px;
@@ -127,6 +169,15 @@
                 max-width: 400px;
                 height: 110px;
                 margin-top: 35px;
+            }
+            @media only screen and (max-width: $tablet) {
+                max-width: 220px;
+                height: 70px;
+                margin-top: 0;
+            }
+            @media only screen and (max-width: $mobile) {
+                min-width: 180px;
+                height: 55px;
             }
         }
     }
@@ -175,6 +226,13 @@
     @media only screen and (max-width: $m-deck) {
         margin: 5px 10px 0;
     }
+    @media only screen and (max-width: $tablet) {
+       @include font(18, 26);
+    }
+    @media only screen and (max-width: $mobile) {
+       @include font(16, 24);
+       margin: 5px 0 0;
+    }
     li {
         margin-bottom: 35px;
         border-bottom: 5px solid $blue-light-color;
@@ -186,6 +244,10 @@
         }
         @media only screen and (max-width: $m-deck) {
             margin-bottom: 15px;
+        }
+        @media only screen and (max-width: $tablet) {
+            border-bottom-width: 1px;
+            margin-bottom: 8px;
         }
     }
     .normalText {
@@ -205,6 +267,9 @@
     @media only screen and (max-width: $m-deck) {
         padding-top: 10px;
     }
+    @media only screen and (max-width: $mobile) {
+       gap: 8px 0;
+    }
     li {
         margin-left: 150px;
         width: calc(50% - 150px);
@@ -216,6 +281,10 @@
         @media only screen and (max-width: $l-deck) {
             margin-left: 100px;
             width: calc(50% - 100px);
+        }
+        @media only screen and (max-width: $tablet) {
+            margin-left: 50px;
+            width: calc(100% - 50px);
         }
         &:nth-child(2n) {
             order: 1;
@@ -244,6 +313,20 @@
             @media only screen and (max-width: $l-deck) {
                 left: -90px;
             }
+            @media only screen and (max-width: $tablet) {
+                width: 50px;
+                height: 50px;
+                border-radius: 15px;
+                @include font(26, 26);
+                left: -55px;
+            }
+            @media only screen and (max-width: $mobile) {
+                width: 25px;
+                height: 25px;
+                border-radius: 5px;
+                @include font(20, 20);
+                left: -40px;
+            }
         }
     }
 }
@@ -266,6 +349,9 @@
     .container {
         @media only screen and (max-width: $land-tablet) {
             min-height: 100vh;
+        }
+        @media only screen and (max-width: $mobile) {
+            min-height: auto;
         }
     }
     .rightLogo {
@@ -297,12 +383,16 @@
             @media only screen and (max-width: $land-tablet) {
                 width: 100%;
             }
+            @media only screen and (max-width: $tablet) {
+                @include font(20, 26);
+                text-align: left;
+            }
         }
     }
 }
 .colorsBox {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, auto); //250px
     gap: 32px 60px;
     padding: 66px 20px 0;
@@ -320,8 +410,17 @@
       gap: 10px;
     }
     @media only screen and (max-width: $land-tablet) {
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, auto) minmax(100px, 100%);
+    }
+    @media only screen and (max-width: $tablet) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto) minmax(100px, 100%);
+        @include font(18, 26);
+    }
+    @media only screen and (max-width: $mobile) {
+        @include font(16, 24);
+        grid-template-rows: repeat(3, auto) minmax(70px, 100%);
     }
     > div {
         min-height: 250px;
@@ -338,6 +437,10 @@
         }
         @media only screen and (max-width: $land-tablet) {
             min-height: auto;
+        }
+        @media only screen and (max-width: $mobile) {
+            padding: 5px;
+            border-radius: 15px;
         }
     }
     .bigBox {
@@ -363,6 +466,15 @@
         @media only screen and (max-width: $land-tablet) {
             grid-column: span 3;
         }
+        @media only screen and (max-width: $tablet) {
+            grid-column: span 2;
+            padding: 0 15px;
+        }
+        @media only screen and (max-width: $mobile) {
+            padding: 5px;
+            @include font(18, 26);
+            border-radius: 15px;
+        }
     }
 }
 .review {
@@ -385,7 +497,7 @@
         .swiper2 {
             width: 44%;
             @media only screen and (max-width: $land-tablet) {
-                width: calc(100% - 80px); // 80px space for paginator
+                width: 100%;
             }
         }
     }
@@ -422,6 +534,10 @@
         @media only screen and (max-width: $land-tablet) {
             bottom: 50%;
         }
+        @media only screen and (max-width: $tablet) {
+            width: 251px;
+            height: 203px;
+        }
     }
     .h2 {
         text-align: center;
@@ -445,7 +561,10 @@
         margin-top: 20px;
     }
     @media only screen and (max-width: $s-deck) {
-        padding: 10px 25px 0 15px;
+        padding: 10px 15px;
+    }
+    @media only screen and (max-width: $tablet) {
+        padding: 10px 0;
     }
     .btn {
         max-width: 100%;
@@ -462,6 +581,10 @@
             height: 90px;
             margin-bottom: 20px;
         }
+        @media only screen and (max-width: $tablet) {
+            height: 45px;
+            margin-bottom: 10px;
+        }
     }
     .twoColumns {
         justify-content: space-between;
@@ -475,14 +598,14 @@
             padding-bottom: 25px;
             @media only screen and (max-width: $xl-deck) {
                 padding-left: 20px;
-                width: calc(50% - 20px);
+                width: 50%;
             }
             @media only screen and (max-width: $s-deck) {
                 padding-left: 10px;
-                width: calc(50% - 10px);
             }
             @media only screen and (max-width: $land-tablet) {
-                width: calc(100% - 10px);
+                width: 100%;
+                padding: 0 20px;
             }
             p {
                 @include font(35, 40);
@@ -492,6 +615,10 @@
                 }
                 @media only screen and (max-width: $l-deck) {
                     @include font(26, 34);
+                }
+                @media only screen and (max-width: $tablet) {
+                    @include font(16, 20);
+                    text-align: center;
                 }
             }
         }

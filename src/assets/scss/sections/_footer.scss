@@ -164,6 +164,14 @@
             }
 
         }
+        @media only screen and (max-width: $tablet) {
+            flex-direction: column;
+            gap: 20px 0;
+            width: 100%;
+            > * {
+                width: 100%;
+            }
+        }
         &.logoHolder {
             width: 62%;
             @media only screen and (max-width: $l-deck) {
