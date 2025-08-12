@@ -123,6 +123,9 @@ header#header {
 				@media only screen and (max-width: $tablet) {
 					padding: 25px 40px;
 				}
+				@media only screen and (max-width: $mobile) {
+					padding: 15px 30px;
+				}
 				&::before {
 					content: '';
 					width: 0;
@@ -182,6 +185,9 @@ header#header {
 		}
 		@media only screen and (max-width: $tablet) {
 			@include font(30, 30);
+		}
+		@media only screen and (max-width: $mobile) {
+			@include font(22, 24);
 		}
 	}
 }

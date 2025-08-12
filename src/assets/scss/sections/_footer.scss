@@ -1,10 +1,6 @@
 #footer {
     .bigLogo {
         display: block;
-        img {
-            //height: 100vh;
-            //width: auto;
-        }
     }
     .titleBox {
         font-family: 'MontserratAlternates-SemiBold';
@@ -58,6 +54,9 @@
             @media only screen and (max-width: $land-tablet) {
                 @include font(20, 28);
             }
+            @media only screen and (max-width: $mobile) {
+                @include font(18, 26);
+            }
             &::after {
                 content: '';
                 width: 0;
@@ -95,6 +94,9 @@
                 @media only screen and (max-width: $s-deck) {
                    flex: 0 0 45px;
                    height: 100px;
+                }
+                @media only screen and (max-width: $mobile) {
+                    height: 80px;
                 }
             }
         }
@@ -141,6 +143,9 @@
                     }
                     @media only screen and (max-width: $s-deck) {
                         width: 90px;
+                    }
+                    @media only screen and (max-width: $mobile) {
+                        width: 75px;
                     }
                 }
             }

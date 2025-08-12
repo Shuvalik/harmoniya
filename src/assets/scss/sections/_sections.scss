@@ -494,6 +494,10 @@
         }
     }
     .twoColumns {
+        @media only screen and (max-width: $mobile) {
+            margin-bottom: 80px;
+            position: relative;
+        } 
         .swiper2 {
             width: 44%;
             @media only screen and (max-width: $land-tablet) {
@@ -538,6 +542,9 @@
             width: 251px;
             height: 203px;
         }
+        @media only screen and (max-width: $mobile) {
+            right: 0;
+        }
     }
     .h2 {
         text-align: center;
@@ -547,6 +554,10 @@
         }
         @media only screen and (max-width: $m-deck) {
            margin-bottom: 20px;
+        }
+        @media only screen and (max-width: $mobile) {
+           padding: 0 48px;
+           margin-bottom: 15px;
         }
     }
     padding: 10px 56px 0 15px;
@@ -566,6 +577,11 @@
     @media only screen and (max-width: $tablet) {
         padding: 10px 0;
     }
+    @media only screen and (max-width: $mobile) {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+    }
     .btn {
         max-width: 100%;
         margin-top: -28px;
@@ -584,6 +600,9 @@
         @media only screen and (max-width: $tablet) {
             height: 45px;
             margin-bottom: 10px;
+        }
+        @media only screen and (max-width: $mobile) {
+            border-radius: 8px;
         }
     }
     .twoColumns {
@@ -606,6 +625,9 @@
             @media only screen and (max-width: $land-tablet) {
                 width: 100%;
                 padding: 0 20px;
+            }
+            @media only screen and (max-width: $mobile) {
+                padding: 0 10px;
             }
             p {
                 @include font(35, 40);
@@ -641,10 +663,12 @@
             }
             @media only screen and (max-width: $land-tablet) {
                 align-self: center;
-                //width: 217px;
-                //height: 250px;
                 width: 257px;
                 height: 300px;
+            }
+            @media only screen and (max-width: $tablet) {
+                width: 217px;
+                height: 250px;
             }
             &::before {
                 content: ' ';

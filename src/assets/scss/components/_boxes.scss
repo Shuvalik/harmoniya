@@ -648,6 +648,9 @@
     @media only screen and (max-width: $l-deck) {
         height: 552px;
     }
+    @media only screen and (max-width: $mobile) {
+        position: unset;
+    } 
     .swiper-wrapper {
         padding-left: 157px;
         @media only screen and (max-width: $xl-deck) {
@@ -655,7 +658,10 @@
         }   
         @media only screen and (max-width: $s-deck) {
             padding-left: 80px;
-        }      
+        }    
+        @media only screen and (max-width: $mobile) {
+            padding: 0;
+        }  
     }
     .swiper-slide {
         height: 752px; // + 8px shadow
@@ -683,6 +689,9 @@
         @media only screen and (max-width: $tablet) {
             transform: translateX(0);
             margin: 0;
+        }
+        @media only screen and (max-width: $mobile) {
+            width: 100%;
         }
         .contentHolder {
             box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
@@ -713,6 +722,15 @@
     .swiper-button-prev, .swiper-button-next {
         left: 0;
         @media only screen and (max-width: $mobile) {
+            top: auto;
+            left: 50%;
+            transform: translate(-75px, 0);
+            bottom: -75px;
+        }
+    }
+    .swiper-button-next {
+        @media only screen and (max-width: $mobile) {
+            transform: translate(20px, 0);
         }
     }
 }
@@ -746,6 +764,9 @@
         }
         @media only screen and (max-width: $tablet) {
             height: 448px;
+        }
+        @media only screen and (max-width: $mobile) {
+            height: 498px;
         }
         .contentHolder {
             box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
@@ -781,6 +802,9 @@
     }
     .swiper-button-prev {
         transform: translate(-120px, 0) rotate(-90deg);
+        @media only screen and (max-width: $mobile) {
+            transform: translate(-90px, 0) rotate(-90deg);
+        }
     }
 }
 // .threeImgBoxes {
