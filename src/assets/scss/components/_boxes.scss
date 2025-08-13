@@ -23,6 +23,7 @@
     }
     @media only screen and (max-width: $mobile) {
         gap: 10px 0;
+        @include font(20, 26);
     }
     > div {
         background-color: $yellow-light-color;
@@ -58,6 +59,7 @@
             text-align: right;
             align-items: flex-end;
             padding: 20px;
+            border-radius: 12px;
         }
         svg {
             height: 100px;
@@ -279,7 +281,7 @@
                     top: -85px;
                     left: 60px;
                 }
-                @media only screen and (max-width: $land-tablet) {
+                @media only screen and (max-width: $tablet) {
                     top: -35px;
                     width: 64px;
                     height: 43px;
@@ -398,11 +400,11 @@
     @media only screen and (max-width: $land-tablet) {
         flex-direction: column;
         flex-wrap: nowrap;
-        gap: 15px 0;
+        gap: 15px;
     }
     @media only screen and (max-width: $tablet) {
         @include font(16, 24);
-        gap: 5px 0;
+        gap: 10px;
     }
     @media only screen and (max-width: $mobile) {
         margin-bottom: 15px;
@@ -417,7 +419,7 @@
             padding: 0 0 0 50px;
         }
         @media only screen and (max-width: $mobile) {
-            padding-left: 30px;
+            padding-left: 25px;
         }
         &:nth-child(odd) {
             width: calc(37% - 78px);
@@ -557,10 +559,6 @@
         width: 200px;
         height: 300px;
     }
-    @media only screen and (max-width: $mobile) {
-        width: 150px;
-        height: 250px;
-    }
     .swiper-slide {
         display: flex;
         align-items: center;
@@ -582,11 +580,8 @@
             @include font(22, 30);
         }
         @media only screen and (max-width: $tablet) {
-            @include font(16, 20);
-            padding: 35px 25px;
-        }
-        @media only screen and (max-width: $mobile) {
-            @include font(12, 20);
+            @include font(18, 26);
+            padding: 20px;
         }
         .title {
             font-family: 'MontserratAlternates-SemiBold';
@@ -653,6 +648,7 @@
     } 
     .swiper-wrapper {
         padding-left: 157px;
+        width: max-content;
         @media only screen and (max-width: $xl-deck) {
             padding-left: 130px;
         }   
@@ -682,16 +678,9 @@
             height: 502px;
             width: 352px;
         } 
-        @media only screen and (max-width: $land-tablet) {
-            margin-inline: auto;
-            transform: translateX(-80px);
-        }
-        @media only screen and (max-width: $tablet) {
-            transform: translateX(0);
-            margin: 0;
-        }
         @media only screen and (max-width: $mobile) {
             width: 100%;
+            max-width: 314px;
         }
         .contentHolder {
             box-shadow: 0 4px 4px rgba(0, 0, 0, .25);

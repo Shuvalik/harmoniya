@@ -15,6 +15,9 @@
         bottom: 0;
         left: 0;
         background: linear-gradient(to top, rgba(255, 255, 255, .9) 8%, rgba(255, 255, 255, 0) 100%);
+        @media only screen and (max-width: $tablet) { 
+            background: linear-gradient(to top, rgba(255, 255, 255, .9) 8%, rgba(255, 255, 255, .3) 80%, rgba(255, 255, 255, 0) 100%);
+        }
         h1 {
             text-align: right;
             margin-bottom: 38px;
@@ -22,9 +25,10 @@
             @media only screen and (max-width: $m-deck) {
                 margin-bottom: 25px;
             }
-            @media only screen and (max-width: $mobile) {
+            @media only screen and (max-width: $tablet) {
                 padding: 0;
                 margin-bottom: 5px;
+                text-align: center;
             }
         }
     }
@@ -54,6 +58,11 @@
                 margin: 0;
             }
     }
+    .h2 {
+        @media only screen and (max-width: $tablet) { 
+            margin: 10px 0;
+        }
+    }
 }
 .summerText {
     @include font(40, 50);
@@ -74,9 +83,12 @@
     @media only screen and (max-width: $tablet) { 
         @include font(18, 26);
         margin-bottom: 10px;
+        br {
+            display: none;
+        }
     }
     @media only screen and (max-width: $mobile) { 
-        @include font(10, 20);
+        @include font(17, 24);
     }
     .mobSmallLogo {
         float: right;
@@ -89,21 +101,23 @@
         grid-template-columns: 1fr 44%;
         grid-template-rows: auto;
         overflow: hidden;
+        gap: 130px 0;
         @media only screen and (max-width: $xl-deck) {
             padding-top: 50px;
             grid-template-columns: 1fr 45%;
         }
+        @media only screen and (max-width: $m-deck) {
+            gap: 75px 0;
+        }
         @media only screen and (max-width: $land-tablet) {
             grid-template-columns: 1fr;
             gap: 20px;
-            min-height: 100vh;
         }
         @media only screen and (max-width: $tablet) {
             padding-top: 15px;
-            gap: 0;
         }
         @media only screen and (max-width: $mobile) {
-            min-height: auto;
+            //gap: 40px;
         }
         .h2 {
             @media only screen and (max-width: $mobile) {
@@ -141,19 +155,19 @@
                     top: -135px;
                     background: url("./../../assets/images/loop-arrow.svg") 0 0 no-repeat ;
                     background-size: contain;
-                    @media only screen and (max-width: $mobile) {
+                    @media only screen and (max-width: $tablet) {
                         width: 167px;
                         height: 176px;
                         right: -28px;
                         top: -150px;
-                    }  
+                    } 
                 }
             }
             @media only screen and (max-width: $tablet) {
                 justify-content: space-between;
             }      
             @media only screen and (max-width: $mobile) {
-                margin-top: 20px;
+                margin: 40px 0;
             }         
         }
         .btn {
@@ -201,6 +215,9 @@
     .btn {
         max-width: 1370px;
         margin: 0 auto;
+        @media only screen and (max-width: $mobile) {
+            height: 60px;
+        }
     }
 }
 .price .container  {
@@ -209,6 +226,9 @@
     }
     @media only screen and (max-width: $s-deck) {
         padding-top: 10px;
+    }
+    @media only screen and (max-width: $mobile) {
+        padding-top: 20px;
     }
 }
 .priceList {
@@ -231,7 +251,7 @@
     }
     @media only screen and (max-width: $mobile) {
        @include font(16, 24);
-       margin: 5px 0 0;
+       margin: 15px 0;
     }
     li {
         margin-bottom: 35px;
@@ -262,13 +282,14 @@
     flex-wrap: wrap;
     padding-top: 20px;
     @media only screen and (max-width: $xl-deck) {
-        gap: 15px 0;
+        gap: 15px;
     }
     @media only screen and (max-width: $m-deck) {
         padding-top: 10px;
     }
     @media only screen and (max-width: $mobile) {
-       gap: 8px 0;
+       gap: 8px;
+       padding: 20px 0;
     }
     li {
         margin-left: 150px;
@@ -280,7 +301,7 @@
         }
         @media only screen and (max-width: $l-deck) {
             margin-left: 100px;
-            width: calc(50% - 100px);
+            width: calc(50% - 110px);
         }
         @media only screen and (max-width: $tablet) {
             margin-left: 50px;
@@ -343,6 +364,9 @@
             padding: 0;
             margin-bottom: 20px;
         }
+        @media only screen and (max-width: $mobile) {
+            text-align: left;
+        }
     }
 }
 .freeDay {
@@ -350,7 +374,7 @@
         @media only screen and (max-width: $land-tablet) {
             min-height: 100vh;
         }
-        @media only screen and (max-width: $mobile) {
+        @media only screen and (max-width: $tabletgit) {
             min-height: auto;
         }
     }
@@ -494,14 +518,15 @@
         }
     }
     .twoColumns {
+        justify-content: space-between;
         @media only screen and (max-width: $mobile) {
             margin-bottom: 80px;
             position: relative;
         } 
         .swiper2 {
-            width: 44%;
+            width: max-content;
             @media only screen and (max-width: $land-tablet) {
-                width: 100%;
+                align-self: center;
             }
         }
     }
