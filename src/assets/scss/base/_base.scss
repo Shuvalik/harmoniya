@@ -223,6 +223,11 @@ strong {
     @include font(18, 24);
   }
 }
+.h5 {
+  @include font(40, 50);
+  font-family: 'MontserratAlternates-SemiBold';
+  margin-bottom: 20px;
+}
 .markGreenColor {
   color: $main-color;
 }
@@ -293,51 +298,11 @@ strong {
 .rightText {
   text-align: right;
 }
-// .smodzi {
-//   font-family: 'emodzi';
-// }
-// .sectionTitle {
-//   font-weight: 500;
-//   @include font(14, 20);
-//   letter-spacing: 3px;
-//   text-transform: uppercase;
-//   margin-bottom: 15px;
-// }
-// .subTitle {
-//   font-weight: 500;
-//   @include font(18, 28);
-//   margin-bottom: 15px;
-// }
-// .titleBox {
-//   color: $black-color;
-//   font-weight: 600;
-//   margin-bottom: 10px;
-// }
-// .addText {
-//     color: $black-color;
-//     @include font(12, 16);
-//     font-weight: 500;
-//     span {
-//       @include font(16, 24);
-//     }
-// }
-// .imageHolderFullWidth {
-//   aspect-ratio: 1270/406;
-//   width: 100%;
-//   padding-top: 40px;
-//   margin-bottom: $main-space;
-//   @media only screen and (max-width: 1020px) {
-//     margin-bottom: $main-space-tb;
-//   }
-// }
-// blockquote {
-//   font-weight: 600;
-//   @include font(24, 36);
-//   @media only screen and (max-width: 660px) {
-//     @include font(22, 28);
-//   }
-// }
-/**/
+.error {
+  @include font(14, 20);
+  color: red;
+  text-align: left;
+}
 .bg-green {
   background-color: $green-lightest-color;
 }

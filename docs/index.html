@@ -54,7 +54,7 @@
           </a>
         </div>
         <div class="holderButton">
-          <button class="btn my-gradient">
+          <button id="contactBtn" class="btn my-gradient" onclick="showContactForm()">
           <span>
             Записатись
           </span>
@@ -70,7 +70,7 @@
   <nav id="mainMenu" class="container">
     <ul>
       <li><a href="#">Про нас</a></li>
-      <li><a href="#">Садочок</a></li>
+      <li><a href="./../sadochok.html">Садочок</a></li>
       <li><a href="#">Початкова школа</a></li>
       <li><a href="#">Середня школа</a></li>
       <li><a href="#">Старша школа</a></li>
@@ -136,10 +136,11 @@
             <h2 class="h2"><span class="markGreenColor">Хто </span>ми?</h2>
             <a href="/" class="smallLogo">
               <picture>
-                <source media="(max-width: 767px)" data-srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                <source media="(max-width: 767px)"
+                  data-srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" />
-                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy"
-                  data-src="./assets/images/minLogo.png" />
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                  class="lazy" data-src="./assets/images/minLogo.png" />
               </picture>
             </a>
           </div>
@@ -148,14 +149,15 @@
               <picture>
                 <source media="(max-width: 767px)" data-srcset="./assets/images/minLogo-mob.png"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" />
-                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy"
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                  class="lazy"
                   data-src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" />
               </picture>
             </a>
             <p>
               Приватний ліцензований заклад освіти,<br />
               що поєднує традиції та інновації. <br /></p>
-              <p>Заклад, який приділяє велику увагу якісній<br />
+            <p>Заклад, який приділяє велику увагу якісній<br />
               академічній складовій з усіх предметів (hard skills),<br />
               а також розвитку особистісних якостей,<br />
               завдяки яким учні успішно взаємодіють<br />
@@ -277,7 +279,7 @@
             </div>
           </div>
           <div class="button-markHolder">
-            <a href="/" class="btn my-gradient"><span>Записатись <br />на пробний день</span></a>
+            <button onclick="showContactForm()" class="btn my-gradient"><span>Записатись <br />на пробний день</span></button>
             <div class="pointArrow">
               <svg class="desc_show">
                 <use xlink:href="assets/images/icons-sprite.svg#arrow_06"></use>
@@ -296,7 +298,9 @@
             <div class="boxLink">
               <div class="imgHolder">
                 <a href="/" class="maskLink"></a>
-                <img data-src="./assets/images/content-image/box-img1.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" alt="Садочок 3-6 років" class="lazy" />
+                <img data-src="./assets/images/content-image/box-img1.jpg"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                  alt="Садочок 3-6 років" class="lazy" />
               </div>
               <div class="item-text">
                 <div class="title-box">
@@ -309,7 +313,8 @@
             <div class="boxLink">
               <div class="imgHolder">
                 <a href="/" class="maskLink"></a>
-                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="./assets/images/content-image/box-img2.jpg" alt="Початкова школа" class="lazy" />
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                  data-src="./assets/images/content-image/box-img2.jpg" alt="Початкова школа" class="lazy" />
               </div>
               <div class="item-text">
                 <div class="title-box">
@@ -322,7 +327,8 @@
             <div class="boxLink">
               <div class="imgHolder">
                 <a href="/" class="maskLink"></a>
-                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" alt="Середня школа" data-src="./assets/images/content-image/box-img3.jpg" class="lazy" />
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                  alt="Середня школа" data-src="./assets/images/content-image/box-img3.jpg" class="lazy" />
               </div>
               <div class="item-text">
                 <div class="title-box">
@@ -335,7 +341,8 @@
             <div class="boxLink">
               <div class="imgHolder">
                 <a href="/" class="maskLink"></a>
-                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="./assets/images/content-image/box-img4.jpg" alt="Старша школа" class="lazy" />
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                  data-src="./assets/images/content-image/box-img4.jpg" alt="Старша школа" class="lazy" />
               </div>
               <div class="item-text">
                 <div class="title-box">
@@ -346,7 +353,7 @@
               </div>
             </div>
           </div>
-          <a href="/" class="btn my-gradient"><span>Записатись на співбесіду прямо зараз</span></a>
+          <button onclick="showContactForm()" class="btn my-gradient"><span>Записатись на співбесіду прямо зараз</span></button>
         </div>
       </section>
       <section id="price" class="price">
@@ -471,8 +478,8 @@
               <picture>
                 <source media="(max-width: 767px)" data-srcset="./assets/images/minLogo-mob.png"
                   src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" />
-                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy"
-                  data-src="./assets/images/minLogo.png" />
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                  class="lazy" data-src="./assets/images/minLogo.png" />
               </picture>
             </a>
           </div>
@@ -489,7 +496,7 @@
             <div class="bg-blue bigBox">Після проведеного дня в ліцеї Ваша дитина зможе
               самостійно прийняти рішення щодо подальшого навчання, враховуючи власний досвід та відчуття,
               які в неї виникали протягом дня</div>
-            <a href="/" class="btn my-gradient"><span>Спробувати безкоштовний день</span></a>
+            <button onclick="showContactForm()" class="btn my-gradient"><span>Спробувати безкоштовний день</span></button>
           </div>
         </div>
       </section>
@@ -897,28 +904,50 @@
           <h2 class="h2">Познайомтесь з нашим ліцеєм</h2>
           <div class="twoColumns">
             <form id="contact" autocomplete="off">
-              <div class="fildSection">
-                <input type="text" autocomplete="off" placeholder=" " id="field1" value="" required>
-                <label for="field1">Як до Вас можна звертатись?</label>
+              <div class="holder">
+                <div class="mainFormContent">
+                <div class="fildSection">
+                  <input type="text" autocomplete="off" placeholder=" " id="name" value="">
+                  <label for="name">Як до Вас можна звертатись?</label>
+                  <span class="error">Будь-ласка вкажіть ваше ім'я</span>
+                </div>
+                <div class="fildSection">
+                  <input type="text" autocomplete="off" id="phone" value="" placeholder="+38(0__)___-__-__">
+                  <label for="phone"></label>
+                  <span class="error">Будь-ласка вкажіть ваш номер телефону</span>
+                </div>
+                <div class="fildSection">
+                  <input type="text" autocomplete="one-time-code" placeholder=" " id="email" value="">
+                  <label for="email">Ваш email</label>
+                  <span class="error">Будь-ласка вкажіть ваш email</span>
+                </div>
+                <button type="submit" class="btn my-gradient">
+                  <span>Записатись на співбесіду</span>
+                </button>
               </div>
-              <div class="fildSection">
-                <input type="text" autocomplete="off" id="field2" value="" placeholder="+38(0__)___-__-__" required>
-                <label for="field2"></label>
+              <div class="resultMessage animate__flipInX" data-wow-duration="1s" data-wow-iteration="1">
+                <div class="successMessage">
+                  <p>Дякуємо!</p>
+                  <p>Ваш запис зареєстровано.</p>
+                  <p>Наш менеджер зв’яжеться з Вами найближчим часом.</p>
+                </div>
+                <div class="errorMessage">
+                  <p>Уппс..</p>
+                  <p>Схоже щось пішло не так.</p>
+                  <p>Спробуйте пізніше.</p>
+                </div>
+                <a href="/" id="reiterate" class="btn greyBtn"><span>Повторити</span></a>
               </div>
-              <div class="fildSection">
-                <input type="text" autocomplete="one-time-code" placeholder=" " id="field3" value="">
-                <label for="field3">Ваш email</label>
               </div>
-              <button type="submit" class="btn my-gradient">
-                <span>Записатись на співбесіду</span>
-              </button>
               <p>Відправляючи форму Ви даєте інформовану
                 згоду на обробку персональних даних</p>
             </form>
+
             <div class="imgHolder">
               <picture>
                 <source media="(max-width: 767px)" data-srcset="./assets/images/contact-img-mob.jpg" />
-                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="./assets/images/contact-img.jpg" class="lazy" />
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                  data-src="./assets/images/contact-img.jpg" class="lazy" />
               </picture>
             </div>
           </div>
@@ -1043,9 +1072,37 @@
     $(function () {
       //2. Получить элемент, к которому необходимо добавить маску
       //$("#field2").mask("+38(099)999-99-99");
-      $("#field2").inputmask({ "mask": "+38 (999) 999-99-99" });
+      $("#phone").inputmask({ "mask": "+38 (999) 999-99-99" });
+
+      function setDisabled(state, button) {
+        if (state) {
+          button.disabled = true;
+        } else { button.disabled = false; };
+      }
 
 
+      function findErrors(form, name, phone, email) {
+        let err = false;
+        if (name === '') {
+          $(form).find('#name').siblings('.error').show();
+          err = true;
+        } else {
+          $(form).find('#name').siblings('.error').hide();
+        };
+        if (phone === '') {
+          $(form).find('#phone').siblings('.error').show();
+          err = true;
+        } else {
+          $(form).find('#phone').siblings('.error').hide();
+        };
+        if (email === '') {
+          $(form).find('#email').siblings('.error').show();
+          err = true;
+        } else {
+          $(form).find('#email').siblings('.error').hide();
+        };
+        return err;
+      }
       /*call functions */
 
       new WOW().init();
@@ -1073,9 +1130,70 @@
         $('#mainMenu').slideToggle();
         $('#mainMenu').toggleClass('open');
       });
-    });
 
-    if (Swiper != "undefined") {
+      $('#contact').on('submit', function (e) {
+        e.preventDefault();
+        setDisabled(true, e);
+        let name =  $(this).find('#name').val(),
+            phone = $(this).find('#phone').val(),
+            email = $(this).find('#email').val();
+        let errors = findErrors(this, name, phone, email);
+        if (errors) {
+          setDisabled(false, e);
+          return false
+        }
+        const msg = `
+                <b>Contact us</b>
+                <b>Name: </b> ${name}
+                <b>Email: </b> ${email}
+                <b>Phone: </b> ${phone}`;
+        const apiToken = "5937002187:AAEg04lEC08E5fgb6mTAv0dOJBsZapEcZE0";
+        const chatId = "-1001738000762";
+        fetch(`https://api.telegram.org/bot${apiToken}/sendMessage`, {
+          method: 'post',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            chat_id: chatId,
+            text: msg,
+            parse_mode: 'HTML'
+          })
+        })
+        .then(response => {
+          $(".mainFormContent").css('visibility', 'hidden');
+            if (response.ok) {
+              $(".successMessage").show();
+              
+              $(".errorMessage").hide();
+            } else {
+              $(".errorMessage").show();
+              
+              $(".successMessage").hide();
+            }
+            const element = document.querySelector('.resultMessage');
+            element.classList.add('wow');
+            new WOW().init();
+          })
+          .finally(() => {
+            setDisabled(false, e);
+            this.reset();
+          });
+      });
+      $('#reiterate').on('click', function (e) {
+        e.preventDefault();
+        $(".resultMessage").css('visibility', 'hidden');
+        $(".mainFormContent").css('visibility', 'visible');
+    });
+  });
+    
+  
+  function showContactForm() {
+    $('html, body').animate({ scrollTop: $('#contact-us').offset().top }, 1000);
+  }
+  
+  if (Swiper != "undefined") {
       const swiper = new Swiper('.swiper', {
         loop: true,
         effect: "cards",
