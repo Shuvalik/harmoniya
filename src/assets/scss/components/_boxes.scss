@@ -182,7 +182,6 @@
         margin-bottom: 30px;
     }
     @media only screen and (max-width: $s-deck) {
-        gap: 35px 30px;
         margin: 0 0 30px;
     }
     @media only screen and (max-width: $land-tablet) {
@@ -570,6 +569,191 @@
                 border-radius: 25px;
                 width: 100%;
                 height: 100%;
+            }
+        }
+    }
+}
+.itemsList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 82px 200px;
+    @include font(34, 46);
+    @media only screen and (max-width: $xl-deck) {
+    }
+    @media only screen and (max-width: $l-deck) {
+        
+    }
+    @media only screen and (max-width: $m-deck) {
+        
+        margin-bottom: 30px;
+    }
+    @media only screen and (max-width: $s-deck) {
+    }
+    @media only screen and (max-width: $land-tablet) {
+    }
+    @media only screen and (max-width: $tablet) {
+    }
+    @media only screen and (max-width: $mobile) {
+    }
+    li {
+        position: relative;
+        text-align: center;
+        @media only screen and (max-width: $land-tablet) {
+        }
+        @media only screen and (max-width: $tablet) {
+        }
+        @media only screen and (max-width: $mobile) {
+        }
+        .iconHolder {
+            @include circle(150);
+            background-color: $blue-light-color;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            svg {
+                    width: 100px;
+                    display: inline-block;
+                }
+            @media only screen and (max-width: $xl-deck) {
+                
+            }
+            @media only screen and (max-width: $tablet) {
+                
+            }
+            @media only screen and (max-width: $mobile) {
+                
+            }
+        }
+        .markBlueColor {
+            font-family: 'MontserratAlternates-SemiBold';
+        }
+        &.first2row {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+        &.last2row {
+            grid-column-start: 3;
+            grid-column-end: 5;
+        }
+        &.arrowVer1 {
+                &::after {
+                content: ' ';
+                background: url("./../../assets/images/arrowVer1.svg") 0 0 no-repeat ;
+                background-size: contain;
+                width: 205px;
+                height: 87px;
+                position: absolute;
+                right: -208px;
+                top: 15px;
+                @media only screen and (max-width: $l-deck) {
+                    
+                }
+                @media only screen and (max-width: $land-tablet) {
+                    background-image: url("./../../assets/images/step-1-2-mob.svg");
+                    left: 35px;
+                    right: auto;
+                    top: auto;
+                    bottom: -95px;
+                    width: 109px;
+                    height: 101px;
+                }
+                @media only screen and (max-width: $tablet) {
+                }
+                @media only screen and (max-width: $mobile) {
+                }
+            }
+        }
+        &.arrowVer2 {
+                &::after {
+                content: ' ';
+                background: url("./../../assets/images/arrowVer2.svg") 0 0 no-repeat ;
+                background-size: contain;
+                width: 193px;
+                height: 29px;
+                position: absolute;
+                right: -208px;
+                top: 15px;
+                @media only screen and (max-width: $l-deck) {
+                    
+                }
+                @media only screen and (max-width: $land-tablet) {
+                    background-image: url("./../../assets/images/step-1-2-mob.svg");
+                    left: 35px;
+                    right: auto;
+                    top: auto;
+                    bottom: -95px;
+                    width: 109px;
+                    height: 101px;
+                }
+                @media only screen and (max-width: $tablet) {
+                }
+                @media only screen and (max-width: $mobile) {
+                }
+            }
+        }
+        &.arrowVer3 {
+                &::before {
+                content: ' ';
+                background: url("./../../assets/images/arrowVer3.svg") 0 0 no-repeat ;
+                background-size: contain;
+                width: 468px;
+                height: 138px;
+                position: absolute;
+                left: -208px;
+                top: 15px;
+                @media only screen and (max-width: $l-deck) {
+                    
+                }
+                @media only screen and (max-width: $land-tablet) {
+                    background-image: url("./../../assets/images/step-1-2-mob.svg");
+                    left: 35px;
+                    right: auto;
+                    top: auto;
+                    bottom: -95px;
+                    width: 109px;
+                    height: 101px;
+                }
+                @media only screen and (max-width: $tablet) {
+                }
+                @media only screen and (max-width: $mobile) {
+                }
+            }
+        }
+    }
+}
+.linksFooterList {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px 45px;
+    @include font(26, 32);
+    flex-wrap: wrap;
+    text-align: center;
+    > * {
+        //max-width: 300px;
+        width: calc(33% - 30px);
+        height: 100px;
+        border-radius: 25px;
+        background-color: $yellow-light-color;
+        &:nth-child(even) {
+            background-color: $blue-light-color;
+        }
+        a {
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            font-family: 'MontserratAlternates-Regular';
+            span {
+                align-self: center;
+            }
+            &.font40 {
+                @include font(40, 46);
+            }
+            &.font30 {
+                @include font(30, 36);
             }
         }
     }

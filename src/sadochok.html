@@ -80,11 +80,11 @@
           </div>
         </div>
       </section>
-      <section class="itemsList">
+      <section>
         <div class="container">
           <h2 class="h2">Як проходить <span class="markBlueColor">день у садочку </span>?</h2>
-          <ul class="stepList">
-            <li>
+          <ul class="itemsList">
+            <li class="arrowVer1">
               <div class="iconHolder">
                 <svg>
                   <use xlink:href="assets/images/icons-sprite.svg#business-deal-handshake"></use>
@@ -96,7 +96,7 @@
                   ігрова діяльність</p>
               </div>
             </li>
-            <li>
+            <li class="arrowVer2">
               <div class="iconHolder">
                 <svg>
                   <use xlink:href="assets/images/icons-sprite.svg#smiley-thumbs-up"></use>
@@ -107,7 +107,7 @@
                 <p>Сніданок</p>
               </div>
             </li>
-            <li>
+            <li class="arrowVer1">
               <div class="iconHolder">
                 <svg>
                   <use xlink:href="assets/images/icons-sprite.svg#teacher"></use>
@@ -129,7 +129,7 @@
                 <p>Прогулянка</p>
               </div>
             </li>
-            <li>
+            <li class="last2row arrowVer1 arrowVer3">
               <div class="iconHolder">
                 <svg>
                   <use xlink:href="assets/images/icons-sprite.svg#smiley-thumbs-up"></use>
@@ -140,7 +140,7 @@
                 <p>Обід</p>
               </div>
             </li>
-            <li>
+            <li class="first2row arrowVer2">
               <div class="iconHolder">
                 <svg>
                   <use xlink:href="assets/images/icons-sprite.svg#smiley-cheeky"></use>
@@ -151,7 +151,7 @@
                 <p>Денний сон</p>
               </div>
             </li>
-            <li>
+            <li class="arrowVer2">
               <div class="iconHolder">
                 <svg>
                   <use xlink:href="assets/images/icons-sprite.svg#smiley-thumbs-up"></use>
@@ -162,7 +162,7 @@
                 <p>Підвечірок</p>
               </div>
             </li>
-            <li>
+            <li class="arrowVer1">
               <div class="iconHolder">
                 <svg>
                   <use xlink:href="assets/images/icons-sprite.svg#teacher"></use>
@@ -173,7 +173,7 @@
                 <p>Навчальні заняття</p>
               </div>
             </li>
-            <li>
+            <li class="arrowVer2">
               <div class="iconHolder">
                 <svg>
                   <use xlink:href="assets/images/icons-sprite.svg#smiley-thumbs-up"></use>
@@ -197,20 +197,11 @@
               </div>
             </li>
           </ul>
-          <ul class="documentsList">
-            <li>Свідоцтво про народження (копія)</li>
-            <li>Свідоцтво про здобуття базової середньої освіти (при вступі у 10-11 клас)</li>
-            <li>Паспорт (копія) дитини, якщо їй виповнилось 14 років</li>
-            <li>Особова справа учня (при переході з іншого закладу освіти)</li>
-            <li>Паспорт (копія) одного з батьків</li>
-            <li>Відомість поточних/семестрових оцінок (при переході з іншого закладу освіти протягом навчального року)
-            </li>
-          </ul>
         </div>
       </section>
-      <section id="contact-us" class="form">
+      <section id="contact-us" class="form blueTema">
         <div class="container">
-          <h2 class="h2">Познайомтесь з нашим ліцеєм</h2>
+          <h3 class="h3">Відкрито набір вихованців на 2024/2025 н.р.</h3>
           <div class="twoColumns">
             <form id="contact" autocomplete="off">
               <div class="mainFormContent">
@@ -252,9 +243,10 @@
 
             <div class="imgHolder">
               <picture>
-                <source media="(max-width: 767px)" data-srcset="@@webRoot/assets/images/contact-img-mob.jpg" />
+                <source media="(max-width: 767px)"
+                  data-srcset="@@webRoot/assets/images/content-image-subpages/sad-contact-us-mob.jpg" />
                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
-                  data-src="@@webRoot/assets/images/contact-img.jpg" class="lazy" />
+                  data-src="@@webRoot/assets/images/content-image-subpages/sad-contact-us.jpg" class="lazy" />
               </picture>
             </div>
           </div>
@@ -262,7 +254,7 @@
       </section>
     </main>
 
-    @@include('parts/footer.html')
+    @@include('parts/footer-subpages.html')
 
   </div>
   @@include('parts/foot.html')

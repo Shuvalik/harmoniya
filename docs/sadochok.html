@@ -143,11 +143,11 @@
           </div>
         </div>
       </section>
-      <section class="itemsList">
+      <section>
         <div class="container">
           <h2 class="h2">Як проходить <span class="markBlueColor">день у садочку </span>?</h2>
-          <ul class="stepList">
-            <li>
+          <ul class="itemsList">
+            <li class="arrowVer1">
               <div class="iconHolder">
                 <svg>
                   <use xlink:href="assets/images/icons-sprite.svg#business-deal-handshake"></use>
@@ -159,7 +159,7 @@
                   ігрова діяльність</p>
               </div>
             </li>
-            <li>
+            <li class="arrowVer2">
               <div class="iconHolder">
                 <svg>
                   <use xlink:href="assets/images/icons-sprite.svg#smiley-thumbs-up"></use>
@@ -170,7 +170,7 @@
                 <p>Сніданок</p>
               </div>
             </li>
-            <li>
+            <li class="arrowVer1">
               <div class="iconHolder">
                 <svg>
                   <use xlink:href="assets/images/icons-sprite.svg#teacher"></use>
@@ -192,7 +192,7 @@
                 <p>Прогулянка</p>
               </div>
             </li>
-            <li>
+            <li class="last2row arrowVer1 arrowVer3">
               <div class="iconHolder">
                 <svg>
                   <use xlink:href="assets/images/icons-sprite.svg#smiley-thumbs-up"></use>
@@ -203,7 +203,7 @@
                 <p>Обід</p>
               </div>
             </li>
-            <li>
+            <li class="first2row arrowVer2">
               <div class="iconHolder">
                 <svg>
                   <use xlink:href="assets/images/icons-sprite.svg#smiley-cheeky"></use>
@@ -214,7 +214,7 @@
                 <p>Денний сон</p>
               </div>
             </li>
-            <li>
+            <li class="arrowVer2">
               <div class="iconHolder">
                 <svg>
                   <use xlink:href="assets/images/icons-sprite.svg#smiley-thumbs-up"></use>
@@ -225,7 +225,7 @@
                 <p>Підвечірок</p>
               </div>
             </li>
-            <li>
+            <li class="arrowVer1">
               <div class="iconHolder">
                 <svg>
                   <use xlink:href="assets/images/icons-sprite.svg#teacher"></use>
@@ -236,7 +236,7 @@
                 <p>Навчальні заняття</p>
               </div>
             </li>
-            <li>
+            <li class="arrowVer2">
               <div class="iconHolder">
                 <svg>
                   <use xlink:href="assets/images/icons-sprite.svg#smiley-thumbs-up"></use>
@@ -260,20 +260,11 @@
               </div>
             </li>
           </ul>
-          <ul class="documentsList">
-            <li>Свідоцтво про народження (копія)</li>
-            <li>Свідоцтво про здобуття базової середньої освіти (при вступі у 10-11 клас)</li>
-            <li>Паспорт (копія) дитини, якщо їй виповнилось 14 років</li>
-            <li>Особова справа учня (при переході з іншого закладу освіти)</li>
-            <li>Паспорт (копія) одного з батьків</li>
-            <li>Відомість поточних/семестрових оцінок (при переході з іншого закладу освіти протягом навчального року)
-            </li>
-          </ul>
         </div>
       </section>
-      <section id="contact-us" class="form">
+      <section id="contact-us" class="form blueTema">
         <div class="container">
-          <h2 class="h2">Познайомтесь з нашим ліцеєм</h2>
+          <h3 class="h3">Відкрито набір вихованців на 2024/2025 н.р.</h3>
           <div class="twoColumns">
             <form id="contact" autocomplete="off">
               <div class="mainFormContent">
@@ -315,9 +306,10 @@
 
             <div class="imgHolder">
               <picture>
-                <source media="(max-width: 767px)" data-srcset="./assets/images/contact-img-mob.jpg" />
+                <source media="(max-width: 767px)"
+                  data-srcset="./assets/images/content-image-subpages/sad-contact-us-mob.jpg" />
                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
-                  data-src="./assets/images/contact-img.jpg" class="lazy" />
+                  data-src="./assets/images/content-image-subpages/sad-contact-us.jpg" class="lazy" />
               </picture>
             </div>
           </div>
@@ -327,19 +319,19 @@
 
     <footer id="footer">
   <div class="container">
-    <div class="twoColumns">
+    <div class="subFooter">
       <div class="logoHolder">
-        <a href="/" class="bigLogo">
+        <a href="/" class="logo">
           <picture>
-            <source media="(max-width: 767px)" data-srcset="./assets/images/logoFoter-mob.png"
+            <source media="(max-width: 767px)" data-srcset="./assets/images/logoFooter-subpages-mob.png"
               src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" />
             <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" class="lazy"
-              data-src="./assets/images/logoFoter.png" />
+              data-src="./assets/images/logoFooter-subpages.png" />
           </picture>
 
         </a>
       </div>
-      <div>
+      <div class="leftSide">
         <address>
           <p class="titleBox">Наші <span class="markGreenColor"> контакти</span></p>
           <div>
@@ -410,6 +402,44 @@
           </ul>
         </div>
       </div>
+      <ul class="linksFooterList">
+        <li>
+          <a href="" class="font40"><span>Статут</span></a>
+        </li>
+        <li>
+          <a href="" class="font40"><span>Ліцензія</span></a>
+        </li>
+        <li>
+          <a href="" class="font30"><span>Програмне забезпечення</span></a>
+        </li>
+        <li>
+          <a href="" class="font30"><span>Кількість учнів</span></a>
+        </li>
+        <li>
+          <a href="" class="font30"><span>Мова навчання</span></a>
+        </li>
+        <li>
+          <a href="" class="font40"><span>Вакансії</span></a>
+        </li>
+        <li>
+          <a href=""><span>Матеріально-технічне забезпечення</span></a>
+        </li>
+        <li>
+          <a href=""><span>Результати моніторингу якості знань</span></a>
+        </li>
+        <li>
+          <a href=""><span>Умови прийому до закладу</span></a>
+        </li>
+        <li>
+          <a href="" class="font40"><span>Річний звіт</span></a>
+        </li>
+        <li>
+          <a href="" class="font30"><span>Академічна доброчесність</span></a>
+        </li>
+        <li>
+          <a href="" class="font30"><span>Протидія булінгу</span></a>
+        </li>
+      </ul>
     </div>
   </div>
 </footer>
