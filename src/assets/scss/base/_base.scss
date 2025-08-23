@@ -221,9 +221,16 @@ strong {
   }
 }
 .h5 {
-  @include font(40, 50);
+  @include font(38, 46);
   font-family: 'MontserratAlternates-SemiBold';
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+  @media only screen and (max-width: $xl-deck) {
+    @include font(30, 36);
+    margin-bottom: 5px;
+  }
+  @media only screen and (max-width: $l-deck) {
+    @include font(26, 32);
+  }
 }
 .markGreenColor {
   color: $main-color;
@@ -310,8 +317,13 @@ strong {
   background-color: $blue-light-color;
 }
 //subpages
-.blueTema {
-  &.form .container::after {
+.blueTheme {
+  section:first-child {
+    &::before {
+      background-color: $blue-light-color;
+    }
+  }
+  .form .container::after {
     background-image: url("./../../assets/images/loop-blue.svg");
   }
 }

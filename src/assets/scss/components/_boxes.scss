@@ -542,16 +542,28 @@
     gap: 20px;
     @include font(30, 45);
     text-align: center;
+    @media only screen and (max-width: $xl-deck) {
+        @include font(22, 30);
+        p {
+            margin-bottom: 5px;
+        }
+    }
+    @media only screen and (max-width: $l-deck) {
+        @include font(20, 28);
+    }
     > div {
         background-color: $blue-light-color;
         border-radius: 25px;
         padding: 20px;
-        width: 33%;
+        width: calc(33% - 13px);
         .imgHolder {
             position: relative;
             width: 100%;
             height: 182px;
-            margin-bottom: 20px;
+            margin-bottom: 17px;
+            @media only screen and (max-width: $xl-deck) {
+                height: 160px;
+            }
             img {
                 border-radius: 25px;
                 overflow: hidden;
@@ -577,12 +589,14 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 82px 200px;
+    gap: 0 160px;
     @include font(34, 46);
+    margin-bottom: 20px;
     @media only screen and (max-width: $xl-deck) {
+        gap: 0 45px;
     }
     @media only screen and (max-width: $l-deck) {
-        
+        @include font(28, 36);
     }
     @media only screen and (max-width: $m-deck) {
         
@@ -608,17 +622,20 @@
         .iconHolder {
             @include circle(150);
             background-color: $blue-light-color;
-            margin: 0 auto;
+            margin: 0 auto -7px;
             display: flex;
             justify-content: center;
             align-items: center;
+            @media only screen and (max-width: $xl-deck) {
+                @include circle(113);
+            }
             svg {
                     width: 100px;
                     display: inline-block;
+                    @media only screen and (max-width: $xl-deck) {
+                        width: 75px;
+                    }
                 }
-            @media only screen and (max-width: $xl-deck) {
-                
-            }
             @media only screen and (max-width: $tablet) {
                 
             }
@@ -628,6 +645,9 @@
         }
         .markBlueColor {
             font-family: 'MontserratAlternates-SemiBold';
+        }
+        p {
+            margin-bottom: 0;
         }
         &.first2row {
             grid-column-start: 1;
@@ -647,10 +667,12 @@
                 width: 205px;
                 height: 87px;
                 position: absolute;
-                right: -208px;
-                top: 15px;
-                @media only screen and (max-width: $l-deck) {
-                    
+                right: -200px;
+                top: 0;
+                @media only screen and (max-width: $xl-deck) {
+                    right: -130px;
+                    width: 185px;
+                    height: 67px;
                 }
                 @media only screen and (max-width: $land-tablet) {
                     background-image: url("./../../assets/images/step-1-2-mob.svg");
@@ -664,6 +686,15 @@
                 @media only screen and (max-width: $tablet) {
                 }
                 @media only screen and (max-width: $mobile) {
+                }
+            }
+            &.last2row::after {
+                right: 95px;
+                top: 40px;
+                transform: rotate(140deg);
+                @media only screen and (max-width: $l-deck) {
+                    right: 75px;
+                    top: 0;
                 }
             }
         }
@@ -675,10 +706,12 @@
                 width: 193px;
                 height: 29px;
                 position: absolute;
-                right: -208px;
-                top: 15px;
-                @media only screen and (max-width: $l-deck) {
-                    
+                right: -188px;
+                top: 80px;
+                @media only screen and (max-width: $xl-deck) {
+                    right: -120px;
+                    width: 173px;
+                    height: 23px;
                 }
                 @media only screen and (max-width: $land-tablet) {
                     background-image: url("./../../assets/images/step-1-2-mob.svg");
@@ -694,6 +727,17 @@
                 @media only screen and (max-width: $mobile) {
                 }
             }
+            &.first2row::after {
+                top: auto;
+                right: auto;
+                bottom: 107px;
+                left: 123px;
+                transform: rotate(128deg);
+                @media only screen and (max-width: $l-deck) {
+                    bottom: 65px;
+                    left: 85px;
+                }
+            }
         }
         &.arrowVer3 {
                 &::before {
@@ -703,8 +747,14 @@
                 width: 468px;
                 height: 138px;
                 position: absolute;
-                left: -208px;
-                top: 15px;
+                left: -320px;
+                bottom: 52px;
+                @media only screen and (max-width: $xl-deck) {
+                     width: 438px;
+                    height: 108px;
+                    left: -220px;
+                    bottom: 90px;
+                }
                 @media only screen and (max-width: $l-deck) {
                     
                 }
@@ -726,17 +776,24 @@
     }
 }
 .linksFooterList {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px 45px;
+    gap: 20px 47px;
     @include font(26, 32);
-    flex-wrap: wrap;
     text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 100px);
+    @media only screen and (max-width: $xl-deck) {
+        gap: 10px 27px;
+        @include font(24, 30);
+    }
+    @media only screen and (max-width: $l-deck) {
+        gap: 10px;
+        @include font(22, 28);
+        grid-template-rows: repeat(4, 85px);
+    }
     > * {
-        //max-width: 300px;
-        width: calc(33% - 30px);
-        height: 100px;
         border-radius: 25px;
+        padding: 0 12px;
         background-color: $yellow-light-color;
         &:nth-child(even) {
             background-color: $blue-light-color;
@@ -751,9 +808,21 @@
             }
             &.font40 {
                 @include font(40, 46);
+                @media only screen and (max-width: $xl-deck) {
+                    @include font(36, 42);
+                }
+                @media only screen and (max-width: $l-deck) {
+                    @include font(34, 40);
+                }
             }
             &.font30 {
                 @include font(30, 36);
+                @media only screen and (max-width: $xl-deck) {
+                    @include font(28, 34);
+                }
+                @media only screen and (max-width: $l-deck) {
+                    @include font(26, 32);
+                }
             }
         }
     }

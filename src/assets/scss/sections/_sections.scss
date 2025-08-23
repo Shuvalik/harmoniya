@@ -77,7 +77,7 @@
         @include font(26, 36);
         margin-bottom: 30px;
     }
-    @media only screen and (max-width: $l-deck) {
+    @media only screen and (max-width: $s-deck) {
         max-width: 100%;
     }
     @media only screen and (max-width: $tablet) { 
@@ -763,11 +763,123 @@
     }
 }
 // sub pages
+.subPages {
+    header#header {
+        .headerMain .container {
+            position: relative;
+            height: 0;
+            .logo {
+                position: absolute;
+                right: 0;
+                top: 80px;
+                @media only screen and (max-width: $l-deck) {
+                    top: 50px;
+                }
+                img {
+                    max-width: 440px;
+                    @media only screen and (max-width: $l-deck) {
+                        max-width: 340px;
+                    }
+                }
+            }
+            .phone, .holderButton {
+                display: none;
+            }
+        }
+        #mainMenu {
+            margin: -8px 0 2px;
+            @media only screen and (max-width: $xl-deck) {
+                margin: 2px 0;
+            }
+        }
+    }
+    section:first-child {
+        padding-top: 0;
+        &::before {
+            content: '';
+            display: block;
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 48px;
+            @media only screen and (max-width: $l-deck) {
+                height: 39px;
+            }
+        }
+    }
+    .h1 {
+        @include font(80, 90);
+        margin-bottom: 18px;
+        @media only screen and (max-width: $xl-deck) { 
+            @include font(70, 80);
+            margin: 0;
+        }
+    }
+    .summerText {
+        margin-bottom: 30px;
+        @media only screen and (max-width: $xl-deck) { 
+            margin-bottom: 5px;
+        }
+        p {
+            margin-bottom: 0;
+        }
+    }
+    .h2 {
+        text-align: center;
+    }
+    .h3 {
+        @include font(68, 76);
+        margin-bottom: 73px;
+        @media only screen and (max-width: $xl-deck) {
+            @include font(54, 60);
+            margin-bottom: 63px;
+        }
+        @media only screen and (max-width: $l-deck) {
+            @include font(48, 56);
+            margin-bottom: 40px;
+        }
+    }
+    .schedy {
+        .h2 {
+            padding-top: 65px;
+            margin-bottom: 40px;
+            @media only screen and (max-width: $xl-deck) {
+                padding-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .form .container {
+        padding: 45px 54px 0 42px;
+        @media only screen and (max-width: $l-deck) {
+            padding: 24px 45px 0 30px;
+        }
+        .twoColumns {
+            margin-bottom: 60px;
+            > form {
+                padding-left: 0;
+                width: 54%;
+            }
+        }
+    }
+}
 .subFooter {
     display: grid;
     grid-template-columns: 1fr 700px;
     grid-template-rows: repeat(2, 1fr);
-    gap: 10px 120px;
+    gap: 57px 120px;
+    @media only screen and (max-width: $xl-deck) {
+        grid-template-columns: 1fr 530px;
+        gap: 0 80px;
+    }
+    @media only screen and (max-width: $l-deck) {
+        grid-template-columns: 1fr 480px;
+        gap: 0 40px;
+    }
+    > * {
+        align-self: end;
+    }
     .logoHolder {
         text-align: center;
     }
@@ -777,6 +889,13 @@
     .logo {
         display: inline-block;
         max-width: 595px;
+        transform: translateX(8%); // correct logo on image not center
+        @media only screen and (max-width: $xl-deck) {
+            max-width: 500px;
+        }
+        @media only screen and (max-width: $l-deck) {
+            max-width: 450px;
+        }
     }
 }
 
