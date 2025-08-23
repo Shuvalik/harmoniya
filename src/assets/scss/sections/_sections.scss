@@ -768,6 +768,10 @@
         .headerMain .container {
             position: relative;
             height: 0;
+            @media only screen and (max-width: $land-tablet) {
+                height: 120px;
+                padding-bottom: 0;
+            }
             .logo {
                 position: absolute;
                 right: 0;
@@ -775,10 +779,22 @@
                 @media only screen and (max-width: $l-deck) {
                     top: 50px;
                 }
+                @media only screen and (max-width: $s-deck) {
+                    top: 40px;
+                    right: -7px;
+                }
+                @media only screen and (max-width: $land-tablet) {
+                    position: relative;
+                    top: 0;
+                    right: 0;
+                }
                 img {
                     max-width: 440px;
                     @media only screen and (max-width: $l-deck) {
                         max-width: 340px;
+                    }
+                    @media only screen and (max-width: $s-deck) {
+                        max-width: 240px;
                     }
                 }
             }
@@ -795,6 +811,9 @@
     }
     section:first-child {
         padding-top: 0;
+        @media only screen and (max-width: $land-tablet) {
+            padding-top: 120px;
+        }
         &::before {
             content: '';
             display: block;
@@ -806,6 +825,12 @@
             @media only screen and (max-width: $l-deck) {
                 height: 39px;
             }
+            @media only screen and (max-width: $s-deck) {
+                height: 35px;
+            }
+            @media only screen and (max-width: $land-tablet) {
+                height: 1px;
+            }
         }
     }
     .h1 {
@@ -813,6 +838,14 @@
         margin-bottom: 18px;
         @media only screen and (max-width: $xl-deck) { 
             @include font(70, 80);
+            margin: 0;
+        }
+        @media only screen and (max-width: $s-deck) {
+            margin-right: 240px;
+            @include font(60, 70);
+        }
+        @media only screen and (max-width: $land-tablet) {
+            @include font(50, 60);
             margin: 0;
         }
     }
@@ -839,6 +872,10 @@
             @include font(48, 56);
             margin-bottom: 40px;
         }
+        @media only screen and (max-width: $l-deck) {
+            @include font(42, 50);
+            margin-bottom: 30px;
+        }
     }
     .schedy {
         .h2 {
@@ -848,18 +885,25 @@
                 padding-top: 20px;
                 margin-bottom: 20px;
             }
+            @media only screen and (max-width: $m-deck) {
+                padding-top: 0;
+                margin-bottom: 10px;
+            }
         }
     }
     .form .container {
         padding: 45px 54px 0 42px;
+        margin-bottom: 60px;
         @media only screen and (max-width: $l-deck) {
             padding: 24px 45px 0 30px;
         }
         .twoColumns {
-            margin-bottom: 60px;
             > form {
                 padding-left: 0;
                 width: 54%;
+                @media only screen and (max-width: $m-deck) {
+                    width: 50%;
+                }
             }
         }
     }
@@ -877,6 +921,17 @@
         grid-template-columns: 1fr 480px;
         gap: 0 40px;
     }
+    @media only screen and (max-width: $m-deck) {
+        grid-template-columns: 1fr 460px;
+        gap: 0 30px;
+    }
+    @media only screen and (max-width: $s-deck) {
+        grid-template-columns: 1fr 390px;
+    }
+    @media only screen and (max-width: $land-tablet) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 101px repeat(2, 1fr);
+    }
     > * {
         align-self: end;
     }
@@ -885,6 +940,9 @@
     }
     .leftSide {
         grid-row: span 2;
+        @media only screen and (max-width: $land-tablet) {
+            grid-row: auto;
+        }
     }
     .logo {
         display: inline-block;

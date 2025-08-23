@@ -551,11 +551,25 @@
     @media only screen and (max-width: $l-deck) {
         @include font(20, 28);
     }
+    @media only screen and (max-width: $m-deck) {
+        @include font(18, 26);
+    }
+    @media only screen and (max-width: $s-deck) {
+        gap: 12px;
+    }
+    
     > div {
         background-color: $blue-light-color;
         border-radius: 25px;
         padding: 20px;
         width: calc(33% - 13px);
+        @media only screen and (max-width: $m-deck) {
+            padding: 15px;
+        }
+        @media only screen and (max-width: $s-deck) {
+            padding: 15px 15px 5px;
+            width: calc(33% - 4px);
+        }
         .imgHolder {
             position: relative;
             width: 100%;
@@ -563,6 +577,9 @@
             margin-bottom: 17px;
             @media only screen and (max-width: $xl-deck) {
                 height: 160px;
+            }
+            @media only screen and (max-width: $m-deck) {
+                height: 140px;
             }
             img {
                 border-radius: 25px;
@@ -599,8 +616,7 @@
         @include font(28, 36);
     }
     @media only screen and (max-width: $m-deck) {
-        
-        margin-bottom: 30px;
+        @include font(24, 32);
     }
     @media only screen and (max-width: $s-deck) {
     }
@@ -629,11 +645,17 @@
             @media only screen and (max-width: $xl-deck) {
                 @include circle(113);
             }
+            @media only screen and (max-width: $s-deck) {
+                @include circle(75);
+            }
             svg {
                     width: 100px;
                     display: inline-block;
                     @media only screen and (max-width: $xl-deck) {
                         width: 75px;
+                    }
+                    @media only screen and (max-width: $s-deck) {
+                        width: 50px;
                     }
                 }
             @media only screen and (max-width: $tablet) {
@@ -674,6 +696,11 @@
                     width: 185px;
                     height: 67px;
                 }
+                @media only screen and (max-width: $s-deck) {
+                    width: 103px;
+                    height: 44px;
+                    right: -70px;
+                }
                 @media only screen and (max-width: $land-tablet) {
                     background-image: url("./../../assets/images/step-1-2-mob.svg");
                     left: 35px;
@@ -696,6 +723,9 @@
                     right: 75px;
                     top: 0;
                 }
+                @media only screen and (max-width: $m-deck) {
+                    right: 50px;
+                }
             }
         }
         &.arrowVer2 {
@@ -712,6 +742,11 @@
                     right: -120px;
                     width: 173px;
                     height: 23px;
+                }
+                @media only screen and (max-width: $s-deck) {
+                    width: 97px;
+                    height: 15px;
+                    right: -70px;
                 }
                 @media only screen and (max-width: $land-tablet) {
                     background-image: url("./../../assets/images/step-1-2-mob.svg");
@@ -737,6 +772,9 @@
                     bottom: 65px;
                     left: 85px;
                 }
+                @media only screen and (max-width: $m-deck) {
+                    left: 65px;
+                }
             }
         }
         &.arrowVer3 {
@@ -750,13 +788,15 @@
                 left: -320px;
                 bottom: 52px;
                 @media only screen and (max-width: $xl-deck) {
-                     width: 438px;
+                    width: 438px;
                     height: 108px;
                     left: -220px;
                     bottom: 90px;
                 }
-                @media only screen and (max-width: $l-deck) {
-                    
+                @media only screen and (max-width: $s-deck) {
+                    width: 234px;
+                    height: 69px;
+                    left: -140px;
                 }
                 @media only screen and (max-width: $land-tablet) {
                     background-image: url("./../../assets/images/step-1-2-mob.svg");
@@ -791,6 +831,10 @@
         @include font(22, 28);
         grid-template-rows: repeat(4, 85px);
     }
+    @media only screen and (max-width: $m-deck) {
+        @include font(18, 24);
+        grid-template-rows: repeat(4, 70px);
+    }
     > * {
         border-radius: 25px;
         padding: 0 12px;
@@ -814,6 +858,9 @@
                 @media only screen and (max-width: $l-deck) {
                     @include font(34, 40);
                 }
+                @media only screen and (max-width: $m-deck) {
+                    @include font(20, 26);
+                }
             }
             &.font30 {
                 @include font(30, 36);
@@ -822,6 +869,9 @@
                 }
                 @media only screen and (max-width: $l-deck) {
                     @include font(26, 32);
+                }
+                @media only screen and (max-width: $m-deck) {
+                    @include font(20, 26);
                 }
             }
         }
