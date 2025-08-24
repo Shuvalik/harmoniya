@@ -848,6 +848,12 @@
             @include font(50, 60);
             margin: 0;
         }
+        @media only screen and (max-width: $tablet) {
+            @include font(30, 40);
+        }
+        @media only screen and (max-width: $mobile) { 
+            @include font(22, 30);
+        }
     }
     .summerText {
         margin-bottom: 30px;
@@ -897,12 +903,20 @@
         @media only screen and (max-width: $l-deck) {
             padding: 24px 45px 0 30px;
         }
+        @media only screen and (max-width: $land-tablet) {
+            padding: 20px 25px;
+            margin-top: 10px;
+        }
         .twoColumns {
             > form {
                 padding-left: 0;
                 width: 54%;
                 @media only screen and (max-width: $m-deck) {
                     width: 50%;
+                }
+                @media only screen and (max-width: $land-tablet) {
+                    width: 100%;
+                    padding: 0;
                 }
             }
         }
@@ -929,11 +943,16 @@
         grid-template-columns: 1fr 390px;
     }
     @media only screen and (max-width: $land-tablet) {
-        grid-template-columns: 1fr;
-        grid-template-rows: 101px repeat(2, 1fr);
+        grid-template-columns: 100%;
+        grid-template-rows: 110px repeat(2, 1fr);
+        gap: 25px;
+        padding-top: 25px;
     }
     > * {
         align-self: end;
+        @media only screen and (max-width: $land-tablet) {
+            align-self: start;
+        }
     }
     .logoHolder {
         text-align: center;
@@ -953,6 +972,18 @@
         }
         @media only screen and (max-width: $l-deck) {
             max-width: 450px;
+        }
+        @media only screen and (max-width: $land-tablet) {
+            transform: translateX(0);
+            max-width: 100%;
+        }
+    }
+}
+#footer .subFooter address {
+    @media only screen and (max-width: $land-tablet) {
+        margin-bottom: 25px;
+        > div svg { 
+            height: 60px;
         }
     }
 }

@@ -557,7 +557,9 @@
     @media only screen and (max-width: $s-deck) {
         gap: 12px;
     }
-    
+    @media only screen and (max-width: $tablet) {
+        flex-wrap: wrap;
+    }
     > div {
         background-color: $blue-light-color;
         border-radius: 25px;
@@ -569,6 +571,9 @@
         @media only screen and (max-width: $s-deck) {
             padding: 15px 15px 5px;
             width: calc(33% - 4px);
+        }
+        @media only screen and (max-width: $tablet) {
+            width: 100%;
         }
         .imgHolder {
             position: relative;
@@ -618,18 +623,29 @@
     @media only screen and (max-width: $m-deck) {
         @include font(24, 32);
     }
-    @media only screen and (max-width: $s-deck) {
-    }
     @media only screen and (max-width: $land-tablet) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        gap: 0 80px;
+        margin-left: 60px;
     }
     @media only screen and (max-width: $tablet) {
+        gap: 0;
+        margin-left: 0;
     }
     @media only screen and (max-width: $mobile) {
     }
     li {
         position: relative;
         text-align: center;
+        grid-column: 1 / span 2;
         @media only screen and (max-width: $land-tablet) {
+            display: flex;
+            text-align: left;
+            gap: 20px;
+            &:nth-child(even) {
+                grid-column-start: 2;
+            }
         }
         @media only screen and (max-width: $tablet) {
         }
@@ -647,6 +663,12 @@
             }
             @media only screen and (max-width: $s-deck) {
                 @include circle(75);
+            }
+            @media only screen and (max-width: $land-tablet) {
+                margin: 0;
+                flex-basis: 75px;
+                flex-shrink: 0;
+                
             }
             svg {
                     width: 100px;
@@ -676,10 +698,18 @@
             grid-column-end: 3;
             grid-row-start: 2;
             grid-row-end: 3;
+            @media only screen and (max-width: $land-tablet) {
+                grid-column: 2 / span 2;
+                grid-row-start: auto;
+                grid-row-end: auto;
+            }
         }
         &.last2row {
             grid-column-start: 3;
             grid-column-end: 5;
+            @media only screen and (max-width: $land-tablet) {
+                grid-column: 1 / span 2;
+            }
         }
         &.arrowVer1 {
                 &::after {
@@ -702,13 +732,13 @@
                     right: -70px;
                 }
                 @media only screen and (max-width: $land-tablet) {
-                    background-image: url("./../../assets/images/step-1-2-mob.svg");
-                    left: 35px;
+                    background-image: url("./../../assets/images/arrowVer1-mob.svg");
                     right: auto;
                     top: auto;
-                    bottom: -95px;
-                    width: 109px;
-                    height: 101px;
+                    left: calc(50% - 40px); /*for gap 80px*/
+                    bottom: -40px;
+                    width: 72px;
+                    height: 36px;
                 }
                 @media only screen and (max-width: $tablet) {
                 }
@@ -726,6 +756,14 @@
                 @media only screen and (max-width: $m-deck) {
                     right: 50px;
                 }
+                @media only screen and (max-width: $land-tablet) {
+                    top: -40px;
+                }
+            }
+            &.correctMobileArrow::after {
+                transform: scale(-1) rotate(-45deg);
+                bottom: 15px;
+                left: -75px;
             }
         }
         &.arrowVer2 {
@@ -749,13 +787,13 @@
                     right: -70px;
                 }
                 @media only screen and (max-width: $land-tablet) {
-                    background-image: url("./../../assets/images/step-1-2-mob.svg");
-                    left: 35px;
+                    background-image: url("./../../assets/images/arrowVer2-mob.svg");
+                    left: -80px;
                     right: auto;
                     top: auto;
-                    bottom: -95px;
-                    width: 109px;
-                    height: 101px;
+                    bottom: 20px;
+                    width: 68px;
+                    height: 30px;
                 }
                 @media only screen and (max-width: $tablet) {
                 }
@@ -775,6 +813,18 @@
                 @media only screen and (max-width: $m-deck) {
                     left: 65px;
                 }
+                @media only screen and (max-width: $land-tablet) {
+                    transform: rotate(0deg);
+                    left: -70px;
+                    bottom: 10px;
+                }
+            }
+            &.correctMobileArrow::after {
+                background-image: url("./../../assets/images/arrowVer3-mob.svg");
+                    left: calc(50% - 50px);
+                    bottom: -30px;
+                    width: 93px;
+                    height: 51px;
             }
         }
         &.arrowVer3 {
@@ -799,13 +849,13 @@
                     left: -140px;
                 }
                 @media only screen and (max-width: $land-tablet) {
-                    background-image: url("./../../assets/images/step-1-2-mob.svg");
-                    left: 35px;
+                    background-image: url("./../../assets/images/arrowVer3-mob.svg");
+                    left: calc(50% - 50px);
                     right: auto;
                     top: auto;
-                    bottom: -95px;
-                    width: 109px;
-                    height: 101px;
+                    bottom: -30px;
+                    width: 93px;
+                    height: 51px;
                 }
                 @media only screen and (max-width: $tablet) {
                 }
@@ -834,6 +884,11 @@
     @media only screen and (max-width: $m-deck) {
         @include font(18, 24);
         grid-template-rows: repeat(4, 70px);
+    }
+    @media only screen and (max-width: $tablet) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 75px);
+        gap: 30px;
     }
     > * {
         border-radius: 25px;
