@@ -772,6 +772,9 @@
                 height: 120px;
                 padding-bottom: 0;
             }
+            @media only screen and (max-width: $tablet) {
+                height: 65px;
+            }
             .logo {
                 position: absolute;
                 right: 0;
@@ -796,7 +799,11 @@
                     @media only screen and (max-width: $s-deck) {
                         max-width: 240px;
                     }
+                    @media only screen and (max-width: $tablet) {
+                        max-width: 190px;
+                    }
                 }
+
             }
             .phone, .holderButton {
                 display: none;
@@ -813,6 +820,9 @@
         padding-top: 0;
         @media only screen and (max-width: $land-tablet) {
             padding-top: 120px;
+        }
+        @media only screen and (max-width: $tablet) {
+            padding-top: 65px;
         }
         &::before {
             content: '';
@@ -882,6 +892,11 @@
             @include font(42, 50);
             margin-bottom: 30px;
         }
+        @media only screen and (max-width: $tablet) {
+            @include font(24, 30);
+            text-align: center;
+            margin-bottom: 15px;
+        }
     }
     .schedy {
         .h2 {
@@ -895,6 +910,13 @@
                 padding-top: 0;
                 margin-bottom: 10px;
             }
+            @media only screen and (max-width: $tablet) {
+                @include font(24, 30);
+            }
+            @media only screen and (max-width: $mobile) {
+                @include font(18, 24);
+                padding-top: 10px;
+            }
         }
     }
     .form .container {
@@ -906,6 +928,7 @@
         @media only screen and (max-width: $land-tablet) {
             padding: 20px 25px;
             margin-top: 10px;
+            margin-bottom: 0;
         }
         .twoColumns {
             > form {
@@ -944,9 +967,13 @@
     }
     @media only screen and (max-width: $land-tablet) {
         grid-template-columns: 100%;
-        grid-template-rows: 110px repeat(2, 1fr);
+        grid-template-rows: 110px repeat(2, auto);
         gap: 25px;
         padding-top: 25px;
+    }
+    @media only screen and (max-width: $tablet) {
+        gap: 15px;
+        padding-top: 15px;
     }
     > * {
         align-self: end;
@@ -985,6 +1012,9 @@
         > div svg { 
             height: 60px;
         }
+    }
+    @media only screen and (max-width: $tablet) {
+        margin-bottom: 10px;
     }
 }
 

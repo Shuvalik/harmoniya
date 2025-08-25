@@ -234,6 +234,9 @@ strong {
   @media only screen and (max-width: $m-deck) {
     @include font(24, 30);
   }
+  @media only screen and (max-width: $mobile) {
+    @include font(20, 26);
+  }
 }
 .markGreenColor {
   color: $main-color;

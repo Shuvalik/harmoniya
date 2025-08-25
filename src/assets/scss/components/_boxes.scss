@@ -560,6 +560,9 @@
     @media only screen and (max-width: $tablet) {
         flex-wrap: wrap;
     }
+    @media only screen and (max-width: $mobile) {
+        @include font(16, 22);
+    }
     > div {
         background-color: $blue-light-color;
         border-radius: 25px;
@@ -585,6 +588,9 @@
             }
             @media only screen and (max-width: $m-deck) {
                 height: 140px;
+            }
+            @media only screen and (max-width: $mobile) {
+                height: auto;
             }
             img {
                 border-radius: 25px;
@@ -623,23 +629,26 @@
     @media only screen and (max-width: $m-deck) {
         @include font(24, 32);
     }
-    @media only screen and (max-width: $land-tablet) {
+    @media only screen and (max-width: $land-tablet) {/*!to do as on mobile*/
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(10, 1fr);
         gap: 0 80px;
         margin-left: 60px;
     }
     @media only screen and (max-width: $tablet) {
-        gap: 0;
         margin-left: 0;
+        @include font(18, 24);
     }
     @media only screen and (max-width: $mobile) {
+        @include font(16, 18);
+        gap: 0 10px;
+        grid-template-columns: repeat(5, 1fr);
     }
     li {
         position: relative;
         text-align: center;
-        grid-column: 1 / span 2;
         @media only screen and (max-width: $land-tablet) {
+            grid-column: 1 / span 2;
             display: flex;
             text-align: left;
             gap: 20px;
@@ -647,9 +656,12 @@
                 grid-column-start: 2;
             }
         }
-        @media only screen and (max-width: $tablet) {
-        }
         @media only screen and (max-width: $mobile) {
+            gap: 5px;
+            grid-column: 1 / span 4;
+            &:nth-child(even) {
+                grid-column: 3 / span 3;
+            }
         }
         .iconHolder {
             @include circle(150);
@@ -668,7 +680,10 @@
                 margin: 0;
                 flex-basis: 75px;
                 flex-shrink: 0;
-                
+            }
+            @media only screen and (max-width: $tablet) {
+                flex-basis: 50px;
+                @include circle(50);
             }
             svg {
                     width: 100px;
@@ -679,10 +694,10 @@
                     @media only screen and (max-width: $s-deck) {
                         width: 50px;
                     }
+                    @media only screen and (max-width: $tablet) {
+                        width: 25px;
+                    }
                 }
-            @media only screen and (max-width: $tablet) {
-                
-            }
             @media only screen and (max-width: $mobile) {
                 
             }
@@ -703,12 +718,18 @@
                 grid-row-start: auto;
                 grid-row-end: auto;
             }
+            @media only screen and (max-width: $mobile) {
+                grid-column: 3 / span 3;
+            }
         }
         &.last2row {
             grid-column-start: 3;
             grid-column-end: 5;
             @media only screen and (max-width: $land-tablet) {
                 grid-column: 1 / span 2;
+            }
+            @media only screen and (max-width: $mobile) {
+                grid-column: 1 / span 4;
             }
         }
         &.arrowVer1 {
@@ -741,6 +762,7 @@
                     height: 36px;
                 }
                 @media only screen and (max-width: $tablet) {
+                    bottom: -30px;
                 }
                 @media only screen and (max-width: $mobile) {
                 }
@@ -760,10 +782,12 @@
                     top: -40px;
                 }
             }
-            &.correctMobileArrow::after {
-                transform: scale(-1) rotate(-45deg);
-                bottom: 15px;
-                left: -75px;
+            @media only screen and (max-width: $land-tablet) {
+                &.correctMobileArrow::after {
+                        transform: scale(-1) rotate(-45deg);
+                        bottom: 15px;
+                        left: -75px;
+                    }
             }
         }
         &.arrowVer2 {
@@ -796,6 +820,7 @@
                     height: 30px;
                 }
                 @media only screen and (max-width: $tablet) {
+                    bottom: 8px;
                 }
                 @media only screen and (max-width: $mobile) {
                 }
@@ -819,12 +844,14 @@
                     bottom: 10px;
                 }
             }
-            &.correctMobileArrow::after {
-                background-image: url("./../../assets/images/arrowVer3-mob.svg");
-                    left: calc(50% - 50px);
-                    bottom: -30px;
-                    width: 93px;
-                    height: 51px;
+            @media only screen and (max-width: $land-tablet) {
+                &.correctMobileArrow::after {
+                    background-image: url("./../../assets/images/arrowVer3-mob.svg");
+                        left: calc(50% - 50px);
+                        bottom: -30px;
+                        width: 93px;
+                        height: 51px;
+                }
             }
         }
         &.arrowVer3 {
@@ -888,7 +915,6 @@
     @media only screen and (max-width: $tablet) {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(6, 75px);
-        gap: 30px;
     }
     > * {
         border-radius: 25px;
