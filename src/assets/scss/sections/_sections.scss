@@ -897,6 +897,11 @@
             text-align: center;
             margin-bottom: 15px;
         }
+        @media only screen and (max-width: $mobile) {
+            @include font(20, 26);
+            text-align: center;
+            margin-bottom: 10px;
+        }
     }
     .schedy {
         .h2 {
@@ -930,7 +935,13 @@
             margin-top: 10px;
             margin-bottom: 0;
         }
+        @media only screen and (max-width: $mobile) {
+            padding: 15px;
+        }
         .twoColumns {
+            @media only screen and (max-width: $mobile) {
+                gap: 28px;
+            }
             > form {
                 padding-left: 0;
                 width: 54%;
@@ -1006,18 +1017,23 @@
         }
     }
 }
-#footer .subFooter address {
-    @media only screen and (max-width: $land-tablet) {
-        margin-bottom: 25px;
-        > div svg { 
-            height: 60px;
+#footer .subFooter {
+    address {
+        @media only screen and (max-width: $land-tablet) {
+            margin-bottom: 25px;
+            > div svg { 
+                height: 60px;
+            }
+        }
+        @media only screen and (max-width: $tablet) {
+            margin-bottom: 10px;
         }
     }
-    @media only screen and (max-width: $tablet) {
-        margin-bottom: 10px;
+    .blueBox {
+        margin: 0;
     }
+    margin-bottom: 20px;
 }
-
 // //career sub page
 // .positionFirstSection {
 //     display: flex;

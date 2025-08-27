@@ -312,6 +312,9 @@ strong {
   @include font(14, 20);
   color: red;
   text-align: left;
+  @media only screen and (max-width: $mobile) {
+    @include font(12, 28);
+  }
 }
 .bg-green {
   background-color: $green-lightest-color;

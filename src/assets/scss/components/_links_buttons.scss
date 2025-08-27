@@ -193,3 +193,20 @@
     }
   }
 }
+.maskLink {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  &:hover {
+    + img {
+      transform: scale(1.4);
+      transition: all .8s ease;
+    }
+    + .h4 {
+      text-decoration: underline;
+    }
+  }
+}
